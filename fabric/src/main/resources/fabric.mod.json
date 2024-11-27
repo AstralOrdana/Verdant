@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "template_mod",
+  "version": "${version}",
+  "name": "Template Mod",
+  "description": "Template Mod Description",
+  "authors": [
+    "Ordana"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/template_mod",
+    "sources": "https://github.com/AstralOrdana/template_mod"
+  },
+  "license": "LGPLv3",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.ordana.template_mod.fabric.TemplateModFabric"
+    ]
+  },
+  "mixins": [
+    "template_mod.mixins.json",
+    "template_mod-common.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": "1.20.1",
+    "moonlight": ">=1.20-2.3.30"
+  }
+}

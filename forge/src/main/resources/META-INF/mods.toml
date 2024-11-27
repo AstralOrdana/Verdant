@@ -1,0 +1,46 @@
+
+modLoader="javafml" #mandatory
+
+loaderVersion="[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+
+license="LGPLv3"
+
+[[mods]] #mandatory
+
+modId="template_mod" #mandatory
+
+version = "${version}"
+
+displayName="Template Mod" #mandatory
+
+logoFile="icon.png" #optional
+
+credits="Ordana" #optional
+
+authors="Ordana" #optional
+
+itemIcon="template_mod:template" #catalogue icon
+description='''
+Template Mod Description
+'''
+
+[[dependencies.template_mod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.template_mod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.template_mod]]
+    modId="moonlight"
+    mandatory=true
+    versionRange="[1.20-2.13.30,]"
+    ordering="NONE"
+    side="BOTH"
