@@ -1,0 +1,65 @@
+{
+  "itemGroup.verdant.verdant": "Verdant",
+
+  "advancements.verdant.moss.title": "Perpetuate the Cycle?",
+  "advancements.verdant.moss.description": "(You ate the moss.), (Tastes... mossy.), (Your HP was mossed out.)",
+  "advancements.verdant.weeds.title": "Weed Wacker",
+  "advancements.verdant.weeds.description": "Pick some Weeds. Weeds only grow on Farmland near tall grass but they will spread",
+  "advancements.verdant.flower_crown.title": "Flower Power",
+  "advancements.verdant.flower_crown.description": "Put on a Flower Crown, the bees think it looks cute on you",
+
+  "advancements.verdant.bark_off.title": "Bark Off",
+  "advancements.verdant.bark_off.description": "Scrape Bark off a Log",
+  "advancements.verdant.bark_on.title": "Bark On",
+  "advancements.verdant.bark_on.description": "Apply Bark to a Stripped Log",
+
+  "config.verdant.general.leaves_decay_particles": "Leaf Decay Particles",
+  "config.verdant.general.falling_leaf_particles": "Falling Leaf Particles",
+  "config.verdant.general.decay_sound": "Leaf Decay Sound",
+
+  "config.verdant.general.block_growths": "Block Growths",
+  "config.verdant.item_interaction.block_growths.descriptionKey": "Should any block growth mechanics occur?",
+  "config.verdant.item_interaction.drop_in_creative": "Interaction Items Drop in Creative",
+  "config.verdant.general.creative_tab": "IW Creative Tab",
+
+  "item.verdant.azalea_flowers": "Azalea Flowers",
+  "item.verdant.flower_crown": "Flower Crown",
+  "block.verdant.moss": "Moss Clump",
+  "item.verdant.golden_moss_clump": "Golden Moss Clump",
+  "item.verdant.enchanted_golden_moss_clump": "Enchanted Golden Moss Clump",
+
+  "block.verdant.ivy": "Ivy",
+  "block.verdant.weeds": "Weeds",
+  "block.verdant.dune_grass": "Dune Grass",
+  "block.verdant.barley": "Barley",
+  "block.verdant.duckweed": "Duckweed",
+  "block.verdant.cattail": "Cattail",
+  "block.verdant.dense_grass": "Dense Grass",
+  "block.verdant.boxwood": "Boxwood",
+  "block.verdant.clover": "Clover",
+
+  "block.verdant.muscari": "Muscari",
+  "block.verdant.red_primrose": "Red Primrose",
+  "block.verdant.orange_primrose": "Orange Primrose",
+  "block.verdant.yellow_primrose": "Yellow Primrose",
+  "block.verdant.lime_primrose": "Lime Primrose",
+  "block.verdant.green_primrose": "Green Primrose",
+  "block.verdant.cyan_primrose": "Cyan Primrose",
+  "block.verdant.light_blue_primrose": "Light Blue Primrose",
+  "block.verdant.blue_primrose": "Blue Primrose",
+  "block.verdant.purple_primrose": "Purple Primrose",
+  "block.verdant.magenta_primrose": "Magenta Primrose",
+  "block.verdant.pink_primrose": "Pink Primrose",
+  "block.verdant.white_primrose": "White Primrose",
+  "block.verdant.light_gray_primrose": "Light Gray Primrose",
+  "block.verdant.gray_primrose": "Gray Primrose",
+  "block.verdant.black_primrose": "Black Primrose",
+  "block.verdant.brown_primrose": "Brown Primrose",
+
+  "item.verdant.crimson_scales": "Crimson Scales",
+  "item.verdant.warped_scales": "Warped Scales",
+  "item.verdant.bark": "%s Bark",
+
+  "block.verdant.azalea_flower_pile": "Azalea Flower Pile",
+  "block.verdant.leaf_pile": "%s Leaf Pile"
+}

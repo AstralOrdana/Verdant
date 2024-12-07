@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "verdant:block/barley_0"
+      },
+      {
+        "model": "verdant:block/barley_1"
+      },
+      {
+        "model": "verdant:block/barley_2"
+      },
+      {
+        "model": "verdant:block/barley_3"
+      }
+    ]
+  }
+}

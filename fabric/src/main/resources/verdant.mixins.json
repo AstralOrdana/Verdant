@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.ordana.verdant.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "ArmorLayerMixin"
+  ],
+  "mixins": [
+    "ItemsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

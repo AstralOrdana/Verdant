@@ -1,0 +1,28 @@
+{
+  "block.verdant.mossy_bricks": "Mattoni muschiosi",
+  "block.verdant.mossy_brick_stairs": "Scalini di mattoni muschiosi",
+  "block.verdant.mossy_brick_slab": "Lastra di mattoni muschiosi",
+  "block.verdant.mossy_brick_wall": "Muretto di mattoni muschiosi",
+
+  "block.verdant.mossy_stone": "Pietra muschiosa",
+  "block.verdant.mossy_stone_stairs": "Scalini di pietra muschiosa",
+  "block.verdant.mossy_stone_slab": "Lastra di pietra muschiosa",
+
+  "block.verdant.cracked_bricks": "Mattoni crepati",
+
+  "item.verdant.stone_brick": "Mattone di pietra",
+  "item.verdant.blackstone_brick": "Mattone di pietranera",
+  "item.verdant.deepslate_brick": "Mattone di ardesia profonda",
+  "item.verdant.deepslate_tile": "Piastrella di ardesia profonda",
+
+  "item.verdant.moss_clump": "Ciuffo di muschio",
+
+  "item.verdant.oak_bark": "Corteccia di quercia",
+  "item.verdant.spruce_bark": "Corteccia di abete",
+  "item.verdant.birch_bark": "Corteccia di betulla",
+  "item.verdant.jungle_bark": "Corteccia della giungla",
+  "item.verdant.acacia_bark": "Corteccia di acacia",
+  "item.verdant.dark_oak_bark": "Corteccia di quercia scura",
+  "item.verdant.crimson_scales": "Scaglie cremisi",
+  "item.verdant.warped_scales": "Scaglie distorte"
+}

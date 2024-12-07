@@ -1,0 +1,192 @@
+{
+  "advancements.verdant.moss.title": "Увековечить цикл существования?",
+  "advancements.verdant.moss.description": "(Вы съели мох.), (Вкус... мшистый.), (Ваше здоровье было покрыто мхом.)",
+
+  "advancements.verdant.icicle.title": "Монч",
+  "advancements.verdant.icicle.description": "Кронк Кронк Кронк",
+
+  "death.attack.icicle": "%1$s был проткнут сосулькой",
+  "death.attack.icicle.player": "%1$s был проткнут сосулькой во время боя с %2$s",
+  "death.attack.fallingIcicle": "%1$s был проткнут падающей сосулькой",
+  "death.attack.fallingIcicle.player": "%1$s был проткнут падающей сосулькой во время боя с %2$s",
+
+  "subtitles.block.icicle.land": "Сосулька падает",
+
+  "block.verdant.icicle": "Сосулька",
+  "item.verdant.ice_sickle": "Ледяной серп",
+
+  "item.verdant.azalea_flowers": "Цветы азалии",
+  "item.verdant.flower_crown": "Венок",
+  "item.verdant.moss_clump": "Комок мха",
+  "item.verdant.golden_moss_clump": "Комок золотого мха",
+  "item.verdant.enchanted_golden_moss_clump": "Зачарованный золотой комок мха",
+
+  "block.verdant.oak_leaf_pile": "Куча дубовых листьев",
+  "block.verdant.spruce_leaf_pile": "Куча еловых листьев",
+  "block.verdant.birch_leaf_pile": "Куча берёзовых листьев",
+  "block.verdant.jungle_leaf_pile": "Куча листьев тропического дерева",
+  "block.verdant.acacia_leaf_pile": "Куча листьев акации",
+  "block.verdant.dark_oak_leaf_pile": "Куча листьев тёмного дуба",
+  "block.verdant.azalea_leaf_pile": "Куча листьев азалии",
+  "block.verdant.flowering_azalea_leaf_pile": "Куча листьев цветущей азалии",
+  "block.verdant.azalea_flower_pile": "Куча цветов азалии",
+
+  "item.verdant.oak_bark": "Кора дуба",
+  "item.verdant.spruce_bark": "Кора ели",
+  "item.verdant.birch_bark": "Кора берёзы",
+  "item.verdant.jungle_bark": "Кора тропического дерева",
+  "item.verdant.acacia_bark": "Кора акации",
+  "item.verdant.dark_oak_bark": "Кора тёмного дуба",
+  "item.verdant.crimson_scales": "Багровые чешуйки",
+  "item.verdant.warped_scales": "Искажённые чешуйки",
+
+  "block.verdant.weeds": "Сорняки",
+  "block.verdant.soot": "Сажа",
+  "block.verdant.ash_block": "Блок золы",
+
+  "block.verdant.mossy_bricks": "Замшелые кирпичи",
+  "block.verdant.mossy_brick_stairs": "Ступеньки из замшелого кирпича",
+  "block.verdant.mossy_brick_slab": "Плита из замшелого кирпича",
+  "block.verdant.mossy_brick_wall": "Стена из замшелого кирпича",
+
+  "block.verdant.mossy_stone": "Замшелый камень",
+  "block.verdant.mossy_stone_stairs": "Ступеньки из замшелого камня",
+  "block.verdant.mossy_stone_slab": "Плита из замшелого камня",
+
+  "block.verdant.cracked_bricks": "Треснувшие кирпичи",
+  "block.verdant.cracked_brick_stairs": "Ступеньки из треснувшего кирпича",
+  "block.verdant.cracked_brick_slab": "Плита из треснувшего кирпича",
+  "block.verdant.cracked_brick_wall": "Стена из треснувшего кирпича",
+
+  "block.verdant.cracked_prismarine_bricks": "Треснувшие призмариновые кирпичи",
+  "block.verdant.cracked_prismarine_brick_stairs": "Ступеньки из треснувшего призмаринового кирпича",
+  "block.verdant.cracked_prismarine_brick_slab": "Плита из треснувшего призмаринового кирпича",
+  "block.verdant.cracked_prismarine_brick_wall": "Стена из треснувшего призмаринового кирпича",
+  "block.verdant.prismarine_brick_wall": "Стена из призмаринового кирпича",
+
+  "block.verdant.cracked_end_stone_bricks": "Треснувшие каменные кирпичи Края",
+  "block.verdant.cracked_end_stone_brick_stairs": "Ступеньки из треснувшего кирпича Края",
+  "block.verdant.cracked_end_stone_brick_slab": "Плита из треснувшего кирпича Края",
+  "block.verdant.cracked_end_stone_brick_wall": "Стена из треснувшего кирпича Края",
+
+  "block.verdant.cracked_stone_brick_stairs": "Ступеньки из треснувшего каменного кирпича",
+  "block.verdant.cracked_stone_brick_slab": "Плита из треснувшего каменного кирпича",
+  "block.verdant.cracked_stone_brick_wall": "Стена из треснувшего каменного кирпича",
+
+  "block.verdant.cracked_nether_brick_stairs": "Ступеньки из треснувшего кирпича Нижнего мира",
+  "block.verdant.cracked_nether_brick_slab": "Плита из треснувшего кирпича Нижнего мира",
+  "block.verdant.cracked_nether_brick_wall": "Стена из треснувшего кирпича Нижнего мира",
+
+  "block.verdant.cracked_deepslate_brick_stairs": "Ступеньки из треснувшего кирпича глубинного сланца",
+  "block.verdant.cracked_deepslate_brick_slab": "Плита из треснувшего кирпича глубинного сланца",
+  "block.verdant.cracked_deepslate_brick_wall": "Стена из треснувшего кирпича глубинного сланца",
+
+  "block.verdant.cracked_deepslate_tile_stairs": "Ступеньки из треснувшей плиты глубинного сланца",
+  "block.verdant.cracked_deepslate_tile_slab": "Плита из треснувшей плиты глубинного сланца",
+  "block.verdant.cracked_deepslate_tile_wall": "Стена из треснувшей плиты глубинного сланца",
+
+  "block.verdant.cracked_polished_blackstone_brick_stairs": "Ступеньки из полированного кирпича базальта",
+  "block.verdant.cracked_polished_blackstone_brick_slab": "Плита из полированного кирпича базальта",
+  "block.verdant.cracked_polished_blackstone_brick_wall": "Стена из полированного кирпича базальта",
+
+  "item.verdant.stone_brick": "Каменный кирпич",
+  "item.verdant.blackstone_brick": "Базальтовый кирпич",
+  "item.verdant.deepslate_brick": "Глубинный сланцевый кирпич",
+  "item.verdant.deepslate_tile": "Плитка глубинного сланца",
+  "item.verdant.end_stone_brick": "Каменный кирпич Края",
+  "item.verdant.prismarine_brick": "Призмариновый кирпич",
+
+  "block.verdant.mulch_block": "Блок мульчи",
+  "block.verdant.nulch_block": "Блок нульчи",
+  "block.verdant.mulch": "Мульча",
+  "block.verdant.nulch": "Нульча",
+
+  "item.verdant.steel_wool": "Стальная шерсть",
+
+  "block.verdant.cut_iron": "Огранённое железо",
+  "block.verdant.exposed_cut_iron": "Раскрытое огранённое железо",
+  "block.verdant.weathered_cut_iron": "Выветренное огранённое железо",
+  "block.verdant.rusted_cut_iron": "Ржавое огранённое железо",
+
+  "block.verdant.cut_iron_stairs": "Ступеньки из огранённого железа",
+  "block.verdant.exposed_cut_iron_stairs": "Ступеньки из раскрытого огранённого железа",
+  "block.verdant.weathered_cut_iron_stairs": "Ступеньки из выветренного огранённого железа",
+  "block.verdant.rusted_cut_iron_stairs": "Ступеньки из ржавого огранённого железа",
+
+  "block.verdant.cut_iron_slab": "Плита из огранённого железа",
+  "block.verdant.exposed_cut_iron_slab": "Плита из раскрытого огранённого железа",
+  "block.verdant.weathered_cut_iron_slab": "Плита из выветренного огранённого железа",
+  "block.verdant.rusted_cut_iron_slab": "Плита из ржавого огранённого железа",
+
+  "block.verdant.waxed_cut_iron": "Огранённое железо покрытое воском",
+  "block.verdant.waxed_exposed_cut_iron": "Раскрытое огранённое железо покрытое воском",
+  "block.verdant.waxed_weathered_cut_iron": "Выветренное огранённое железо покрытое воском",
+  "block.verdant.waxed_rusted_cut_iron": "Ржавое огранённое железо покрытое воском",
+
+  "block.verdant.waxed_cut_iron_stairs": "Ступеньки из огранённого железа покрытого воском",
+  "block.verdant.waxed_exposed_cut_iron_stairs": "Ступеньки из раскрытого огранённого железа покрытого воском",
+  "block.verdant.waxed_weathered_cut_iron_stairs": "Ступеньки из выветренного огранённого железа покрытого воском",
+  "block.verdant.waxed_rusted_cut_iron_stairs": "Ступеньки из ржавого огранённого железа покрытого воском",
+
+  "block.verdant.waxed_cut_iron_slab": "Плита из огранённого железа покрытого воском",
+  "block.verdant.waxed_exposed_cut_iron_slab": "Плита из раскрытого огранённого железа покрытого воском",
+  "block.verdant.waxed_weathered_cut_iron_slab": "Плита из выветренного огранённого железа покрытого воском",
+  "block.verdant.waxed_rusted_cut_iron_slab": "Плита из ржавого огранённого железа покрытого воском",
+
+  "block.verdant.plate_iron": "Железная пластина",
+  "block.verdant.exposed_plate_iron": "Раскрытая железная пластина",
+  "block.verdant.weathered_plate_iron": "Выветренная железная пластина",
+  "block.verdant.rusted_plate_iron": "Ржавая железная пластина",
+
+  "block.verdant.plate_iron_stairs": "Ступеньки из железной пластины",
+  "block.verdant.exposed_plate_iron_stairs": "Ступеньки из раскрытой железной пластины",
+  "block.verdant.weathered_plate_iron_stairs": "Ступеньки из выветренной железной пластины",
+  "block.verdant.rusted_plate_iron_stairs": "Ступеньки из ржавой железной пластины",
+
+  "block.verdant.plate_iron_slab": "Плита из железной пластины",
+  "block.verdant.exposed_plate_iron_slab": "Плита из раскрытой железной пластины",
+  "block.verdant.weathered_plate_iron_slab": "Плита из выветренной железной пластины",
+  "block.verdant.rusted_plate_iron_slab": "Плита из ржавой железной пластины",
+
+  "block.verdant.waxed_plate_iron": "Железная пластина покрытая воском",
+  "block.verdant.waxed_exposed_plate_iron": "Раскрытая железная пластина покрытая воском",
+  "block.verdant.waxed_weathered_plate_iron": "Выветренная железная пластина покрытая воском",
+  "block.verdant.waxed_rusted_plate_iron": "Ржавая железная пластина покрытая воском",
+
+  "block.verdant.waxed_plate_iron_stairs": "Ступеньки из железной пластины покрытой воском",
+  "block.verdant.waxed_exposed_plate_iron_stairs": "Ступеньки из раскрытой железной пластины покрытой воском",
+  "block.verdant.waxed_weathered_plate_iron_stairs": "Ступеньки из выветренной железной пластины покрытой воском",
+  "block.verdant.waxed_rusted_plate_iron_stairs": "Ступеньки из  ржавой железной пластины покрытой воском",
+
+  "block.verdant.waxed_plate_iron_slab": "Плита из железной пластины покрытой воском",
+  "block.verdant.waxed_exposed_plate_iron_slab": "Плита из раскрытой железной пластины покрытой воском",
+  "block.verdant.waxed_weathered_plate_iron_slab": "Плита из выветренной железной пластины покрытой воском",
+  "block.verdant.waxed_rusted_plate_iron_slab": "Плита из ржавой железной пластины покрытой воском",
+
+  "block.verdant.exposed_iron_door": "Раскрытая железная дверь",
+  "block.verdant.weathered_iron_door": "Выветренная железная дверь",
+  "block.verdant.rusted_iron_door": "Ржавая железная дверь",
+
+  "block.verdant.exposed_iron_trapdoor": "Раскрытые железный люк",
+  "block.verdant.weathered_iron_trapdoor": "Выветренный железный люк",
+  "block.verdant.rusted_iron_trapdoor": "Ржавый железный люк",
+
+  "block.verdant.exposed_iron_bars": "Раскрытые железные прутья",
+  "block.verdant.weathered_iron_bars": "Выветренные железные прутья",
+  "block.verdant.rusted_iron_bars": "Ржавые железные прутья",
+
+  "block.verdant.waxed_iron_door": "Железная дверь покрытая воском",
+  "block.verdant.waxed_exposed_iron_door": "Раскрытая железная дверь покрытая воском",
+  "block.verdant.waxed_weathered_iron_door": "Выветренная железная дверь покрытая воском",
+  "block.verdant.waxed_rusted_iron_door": "Ржавая железная дверь покрытая воском",
+
+  "block.verdant.waxed_iron_trapdoor": "Железный люк покрытый воском",
+  "block.verdant.waxed_exposed_iron_trapdoor": "Раскрытый железный люк покрытый воском",
+  "block.verdant.waxed_weathered_iron_trapdoor": "Выветренный железный люк покрытый воском",
+  "block.verdant.waxed_rusted_iron_trapdoor": "Ржавый железный люк покрытый воском",
+
+  "block.verdant.waxed_iron_bars": "Железные прутья покрытые воском",
+  "block.verdant.waxed_exposed_iron_bars": "Раскрытые железные прутья покрытые воском",
+  "block.verdant.waxed_weathered_iron_bars": "Выветренные железные прутья покрытые воском",
+  "block.verdant.waxed_rusted_iron_bars": "Ржавые железные прутья покрытые воском"
+}

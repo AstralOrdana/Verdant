@@ -1,1 +1,1 @@
-# Template mod codebase for creating multiloader mods
+# Verdant codebase for creating multiloader mods

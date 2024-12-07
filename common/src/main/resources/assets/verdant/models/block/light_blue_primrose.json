@@ -1,0 +1,6 @@
+{
+  "parent": "verdant:block/primrose_template",
+  "textures": {
+    "flower": "verdant:block/light_blue_primrose"
+  }
+}

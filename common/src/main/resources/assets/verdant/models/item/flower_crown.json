@@ -1,0 +1,116 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "verdant:item/flower_crown"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "verdant:supporter": 0.10
+      },
+      "model": "verdant:item/flower_crown_bee"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.11
+      },
+      "model": "verdant:item/flower_crown_jar"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.12
+      },
+      "model": "verdant:item/flower_crown_bob"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.200
+      },
+      "model": "verdant:item/flower_crown_ace"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.201
+      },
+      "model": "verdant:item/flower_crown_aro"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.202
+      },
+      "model": "verdant:item/flower_crown_bi"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.203
+      },
+      "model": "verdant:item/flower_crown_enby"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.204
+      },
+      "model": "verdant:item/flower_crown_gay"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.205
+      },
+      "model": "verdant:item/flower_crown_lesbian"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.206
+      },
+      "model": "verdant:item/flower_crown_rainbow"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.207
+      },
+      "model": "verdant:item/flower_crown_trans"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.208
+      },
+      "model": "verdant:item/flower_crown_pan"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.209
+      },
+      "model": "verdant:item/flower_crown_intersex"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.210
+      },
+      "model": "verdant:item/flower_crown_genderqueer"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.211
+      },
+      "model": "verdant:item/flower_crown_fluid"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.30
+      },
+      "model": "verdant:item/flower_crown_flax"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.31
+      },
+      "model": "verdant:item/flower_crown_nekomaster"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.32
+      },
+      "model": "verdant:item/flower_crown_akashii"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "flowerbed": "verdant:block/duckweed",
+    "particle": "verdant:block/duckweed"
+  },
+  "elements": [
+    {
+      "from": [0, -1, 0],
+      "to": [8, -1, 8],
+      "faces": {
+        "up": {"uv": [0, 0, 8, 8], "texture": "#flowerbed"},
+        "down": {"uv": [0, 8, 8, 0], "texture": "#flowerbed"}
+      }
+    }
+  ]
+}

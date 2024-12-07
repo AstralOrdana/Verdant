@@ -7,11 +7,11 @@ license="LGPLv3"
 
 [[mods]] #mandatory
 
-modId="template_mod" #mandatory
+modId="verdant" #mandatory
 
 version = "${version}"
 
-displayName="Template Mod" #mandatory
+displayName="Verdant" #mandatory
 
 logoFile="icon.png" #optional
 
@@ -19,26 +19,26 @@ credits="Ordana" #optional
 
 authors="Ordana" #optional
 
-itemIcon="template_mod:template" #catalogue icon
+itemIcon="verdant:template" #catalogue icon
 description='''
-Template Mod Description
+Verdant Description
 '''
 
-[[dependencies.template_mod]]
+[[dependencies.verdant]]
     modId="forge"
     mandatory=true
     versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.template_mod]]
+[[dependencies.verdant]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.20.1]"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.template_mod]]
+[[dependencies.verdant]]
     modId="moonlight"
     mandatory=true
     versionRange="[1.20-2.13.30,]"

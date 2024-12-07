@@ -1,0 +1,36 @@
+{
+	"ambientocclusion": false,
+	"textures": {
+		"2": "verdant:block/clover",
+		"stem": "verdant:block/clover",
+		"particle": "verdant:block/clover"
+	},
+	"elements": [
+		{
+			"from": [8, 2, 8],
+			"to": [16, 2, 16],
+			"faces": {
+				"up": {"uv": [8, 8, 16, 16], "texture": "#2"},
+				"down": {"uv": [8, 16, 16, 8], "texture": "#2"}
+			}
+		},
+		{
+			"from": [15.15, 0, -1.85],
+			"to": [15.15, 2, -0.85],
+			"rotation": {"angle": -45, "axis": "y", "origin": [-2.5, 0, 1.5]},
+			"faces": {
+				"east": {"uv": [4, 0, 5, 2], "texture": "#stem"},
+				"west": {"uv": [4, 0, 5, 2], "texture": "#stem"}
+			}
+		},
+		{
+			"from": [14.65, 0, -1.35],
+			"to": [15.65, 2, -1.35],
+			"rotation": {"angle": -45, "axis": "y", "origin": [-2.5, 0, 1.5]},
+			"faces": {
+				"north": {"uv": [4, 0, 5, 2], "texture": "#stem"},
+				"south": {"uv": [4, 0, 5, 2], "texture": "#stem"}
+			}
+		}
+	]
+}

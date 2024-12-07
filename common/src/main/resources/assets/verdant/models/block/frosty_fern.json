@@ -1,0 +1,8 @@
+{
+  "parent": "verdant:block/frosty_tinted_cross",
+  "textures": {
+    "grass": "verdant:block/frosty_fern_overlay",
+    "frosty": "verdant:block/frosty_fern",
+    "particle": "verdant:item/frosty_fern_item"
+  }
+}

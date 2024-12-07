@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "verdant:block/weeds_0"
+    },
+    "age=1": {
+      "model": "verdant:block/weeds_1"
+    },
+    "age=2": {
+      "model": "verdant:block/weeds_2"
+    },
+    "age=3": {
+      "model": "verdant:block/weeds_3"
+    },
+    "age=4": {
+      "model": "verdant:block/weeds_4"
+    },
+    "age=5": {
+      "model": "verdant:block/weeds_5"
+    },
+    "age=6": {
+      "model": "verdant:block/weeds_6"
+    },
+    "age=7": {
+      "model": "verdant:block/weeds_7"
+    }
+  }
+}
