@@ -17,6 +17,7 @@ import net.mehvahdjukaar.moonlight.api.util.math.colors.RGBColor;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -53,6 +54,11 @@ public class VerdantClient {
         ClientHelper.registerRenderType(ModBlocks.TALL_MUSCARI.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.DUCKWEED.get(), RenderType.cutout());
         ClientHelper.registerRenderType(ModBlocks.CLOVER.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.MONSTERA.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.JUNGLE_FERN.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.RED_HIBISCUS.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.PURPLE_HIBISCUS.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.BLUE_HIBISCUS.get(), RenderType.cutoutMipped());
 
         ClientHelper.registerRenderType(ModBlocks.RED_PRIMROSE.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.ORANGE_PRIMROSE.get(), RenderType.cutoutMipped());
@@ -114,6 +120,18 @@ public class VerdantClient {
                 event.register((blockState, blockAndTintGetter, blockPos, i) ->
                         getLeafTypeColor(event, type, blockState, blockAndTintGetter, blockPos, i), leafPile));
 
+
+        //grass block tint
+        event.register((blockState, level, blockPos, i) -> event.getColor(Blocks.GRASS_BLOCK.defaultBlockState(), level, blockPos, i),
+                ModBlocks.JUNGLE_FERN.get(),
+                ModBlocks.MONSTERA.get(),
+                ModBlocks.DENSE_GRASS.get());
+
+        //spruce leaves tint
+        event.register((blockState, level, blockPos, i) -> event.getColor(Blocks.SPRUCE_LEAVES.defaultBlockState(), level, blockPos, i),
+                ModBlocks.BOXWOOD.get());
+
+        //with exception for particles
         event.register((blockState, level, blockPos, i) -> {
                     if (i == 0) return -1;
                     return event.getColor(Blocks.GRASS_BLOCK.defaultBlockState(), level, blockPos, i);
@@ -135,7 +153,6 @@ public class VerdantClient {
                 ModBlocks.GRAY_PRIMROSE.get(),
                 ModBlocks.LIGHT_GRAY_PRIMROSE.get(),
                 ModBlocks.BROWN_PRIMROSE.get(),
-                ModBlocks.BOXWOOD.get(),
                 ModBlocks.BARLEY.get());
     }
 
@@ -153,6 +170,11 @@ public class VerdantClient {
         ModItems.LEAF_PILES.forEach((type, leafPile) -> {
             event.register((itemStack, i) -> event.getColor(type.leaves.asItem().getDefaultInstance(), i), leafPile);
         });
+
+        event.register((itemStack, i) -> event.getColor(Items.GRASS_BLOCK.getDefaultInstance(), i),
+                ModBlocks.JUNGLE_FERN.get(),
+                ModBlocks.MONSTERA.get(),
+                ModBlocks.DENSE_GRASS.get());
 
     }
 

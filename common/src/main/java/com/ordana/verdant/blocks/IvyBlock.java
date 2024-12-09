@@ -318,7 +318,7 @@ public class IvyBlock extends MultifaceBlock implements BonemealableBlock {
 					BlockState externalState = level.getBlockState(externalPos);
 					BlockState newStateOpposed = this.defaultBlockState().setValue(MultifaceBlock.getFaceProperty(dir.getOpposite()), true);
 
-					if (level.getBlockState(pos.relative(dir)).isAir() && (externalState.isAir() || externalState.is(this)) && this.canSurvive(newStateOpposed, level, externalPos) && isIvyPos(externalPos)) {
+					if (level.isEmptyBlock(pos.relative(dir)) && (externalState.isAir() || externalState.is(this)) && this.canSurvive(newStateOpposed, level, externalPos) && isIvyPos(externalPos)) {
 						BlockState finalNewState = externalState.is(this) ? externalState.setValue(MultifaceBlock.getFaceProperty(dir.getOpposite()), true) : (state.getValue(AGE) < MAX_AGE ? newStateOpposed.setValue(AGE, state.getValue(AGE) + 1) : newStateOpposed);
 						level.setBlockAndUpdate(externalPos, finalNewState);
 						if (!finalNewState.equals(externalState)) {
@@ -342,7 +342,7 @@ public class IvyBlock extends MultifaceBlock implements BonemealableBlock {
 					BlockState externalState = level.getBlockState(externalPos);
 					BlockState newStateOpposed = this.defaultBlockState().setValue(MultifaceBlock.getFaceProperty(dir.getOpposite()), true);
 
-					if (level.getBlockState(pos.relative(dir)).isAir() && (externalState.isAir() || externalState.is(this)) && this.canSurvive(newStateOpposed, level, externalPos)) {
+					if (level.isEmptyBlock(pos.relative(dir)) && (externalState.isAir() || externalState.is(this)) && this.canSurvive(newStateOpposed, level, externalPos)) {
 						BlockState finalNewState = externalState.is(this) ? externalState.setValue(MultifaceBlock.getFaceProperty(dir.getOpposite()), true) : (state.getValue(AGE) < MAX_AGE ? newStateOpposed.setValue(AGE, state.getValue(AGE) + 1) : newStateOpposed);
 						if (!finalNewState.equals(externalState)) {
 							return true;

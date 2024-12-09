@@ -1,0 +1,21 @@
+{
+  "textures": {
+    "3": "verdant:block/saguaro_arm_side",
+    "4": "verdant:block/saguaro_arm_top",
+    "particle": "verdant:block/saguaro_side"
+  },
+  "elements": [
+    {
+      "from": [4, 0, 4],
+      "to": [12, 4, 12],
+      "rotation": {"angle": 0, "axis": "y", "origin": [11, 0, 4]},
+      "faces": {
+        "north": {"uv": [4, 0, 12, 4], "texture": "#3"},
+        "east": {"uv": [12, 0, 4, 4], "texture": "#3"},
+        "south": {"uv": [4, 0, 12, 4], "texture": "#3"},
+        "west": {"uv": [4, 0, 12, 4], "texture": "#3"},
+        "up": {"uv": [4, 4, 12, 12], "texture": "#4"}
+      }
+    }
+  ]
+}

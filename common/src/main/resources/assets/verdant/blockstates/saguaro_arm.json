@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "verdant:block/saguaro_arm",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "verdant:block/saguaro_arm",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "verdant:block/saguaro_arm"
+    },
+    "facing=west": {
+      "model": "verdant:block/saguaro_arm",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "verdant:block/saguaro_stem"
+    },
+    "facing=down": {
+      "model": "verdant:block/saguaro_cap"
+    }
+  }
+}

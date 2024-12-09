@@ -14,10 +14,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.TallFlowerBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.MapColor;
@@ -90,12 +87,27 @@ public class ModBlocks {
 
     public static final Supplier<Block> CLOVER = regWithItem("clover", () ->
             new CloverBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> MONSTERA = regWithItem("monstera", () ->
+            new TallFlowerBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> JUNGLE_FERN = regWithItem("jungle_fern", () ->
+            new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> SAGUARO = regBlock("saguaro", () ->
+            new SaguaroBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> SAGUARO_ARM = regWithItem("saguaro_arm", () ->
+            new SaguaroArmBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
 
     public static final Supplier<Block> MUSCARI = regWithItem("muscari", () ->
             new MuscariBlock(MobEffects.POISON, 12, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> TALL_MUSCARI = regBlock("tall_muscari", () ->
             new TallMuscariBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> RED_HIBISCUS = regWithItem("red_hibiscus", () ->
+            new FlowerBlock(MobEffects.DAMAGE_BOOST, 7, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> PURPLE_HIBISCUS = regWithItem("purple_hibiscus", () ->
+            new FlowerBlock(MobEffects.DAMAGE_BOOST, 7, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> BLUE_HIBISCUS = regWithItem("blue_hibiscus", () ->
+            new FlowerBlock(MobEffects.DAMAGE_BOOST, 7, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+
 
     public static final Supplier<Block> RED_PRIMROSE = regWithItem("red_primrose", () ->
             new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.RED).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));

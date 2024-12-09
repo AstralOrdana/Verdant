@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "verdant:block/monstera_bottom"
+    },
+    "half=upper": {
+      "model": "verdant:block/monstera_top"
+    }
+  }
+}

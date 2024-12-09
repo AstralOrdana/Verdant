@@ -30,18 +30,16 @@ public class ModCreativeTab {
         );
 
         after(e, Items.FERN, CreativeModeTabs.NATURAL_BLOCKS,
-                ModBlocks.CLOVER, ModBlocks.DUNE_GRASS, ModBlocks.BARLEY, ModBlocks.DENSE_GRASS, ModBlocks.BOXWOOD
+                ModBlocks.JUNGLE_FERN, ModBlocks.CLOVER, ModBlocks.DUNE_GRASS, ModBlocks.BARLEY, ModBlocks.DENSE_GRASS, ModBlocks.MONSTERA, ModBlocks.BOXWOOD
         );
 
         after(e, Items.LILY_PAD, CreativeModeTabs.NATURAL_BLOCKS,
-                ModBlocks.DUCKWEED
-        );
-
-        after(e, Items.SEAGRASS, CreativeModeTabs.NATURAL_BLOCKS,
+                ModBlocks.DUCKWEED,
                 ModBlocks.CATTAIL
         );
 
         after(e, Items.LILY_OF_THE_VALLEY, CreativeModeTabs.NATURAL_BLOCKS,
+                ModBlocks.RED_HIBISCUS, ModBlocks.PURPLE_HIBISCUS, ModBlocks.BLUE_HIBISCUS,
                 ModBlocks.MUSCARI,
                 ModBlocks.RED_PRIMROSE,
                 ModBlocks.ORANGE_PRIMROSE,

@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column",
+    "textures": {
+        "end": "verdant:block/saguaro_inside",
+        "side": "verdant:block/saguaro_side"
+    }
+}

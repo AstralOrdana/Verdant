@@ -1,6 +1,7 @@
 {
-  "parent": "verdant:block/bush_dense",
+  "parent": "verdant:block/bush_dense_tint",
   "textures": {
+    "overlay": "verdant:block/dense_grass",
     "grass": "verdant:block/dense_grass"
   }
 }

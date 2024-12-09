@@ -37,6 +37,9 @@
   "block.verdant.dense_grass": "Dense Grass",
   "block.verdant.boxwood": "Boxwood",
   "block.verdant.clover": "Clover",
+  "block.verdant.jungle_fern": "Jungle Fern",
+  "block.verdant.monstera": "Monstera",
+  "block.verdant.saguaro_arm": "Saguaro",
 
   "block.verdant.muscari": "Muscari",
   "block.verdant.red_primrose": "Red Primrose",
@@ -55,6 +58,10 @@
   "block.verdant.gray_primrose": "Gray Primrose",
   "block.verdant.black_primrose": "Black Primrose",
   "block.verdant.brown_primrose": "Brown Primrose",
+
+  "block.verdant.red_hibiscus": "Red Hibiscus",
+  "block.verdant.purple_hibiscus": "Purple Hibiscus",
+  "block.verdant.blue_hibiscus": "Blue Hibiscus",
 
   "item.verdant.crimson_scales": "Crimson Scales",
   "item.verdant.warped_scales": "Warped Scales",

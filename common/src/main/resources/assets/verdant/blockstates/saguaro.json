@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "attached=true": {
+      "model": "verdant:block/saguaro"
+    },
+    "attached=false": {
+      "model": "verdant:block/saguaro_inside"
+    }
+  }
+}

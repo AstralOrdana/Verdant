@@ -58,7 +58,7 @@ public class ModPropaguleBlock extends MangrovePropaguleBlock implements Fallabl
 
     @Override
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        if (canFallThrough(level.getBlockState(pos.below())) && pos.getY() >= level.getMinBuildHeight() && (level.getBlockState(pos.above()).isAir() || (level.getBlockState(pos.above())).getBlock() instanceof LeafPileBlock) && state.getValue(HANGING) && state.getValue(AGE) == 4) {
+        if (canFallThrough(level.getBlockState(pos.below())) && pos.getY() >= level.getMinBuildHeight() && (level.isEmptyBlock(pos.above()) || (level.getBlockState(pos.above())).getBlock() instanceof LeafPileBlock) && state.getValue(HANGING) && state.getValue(AGE) == 4) {
             FallingBlockEntity fallingblockentity = FallingPropaguleEntity.fall(level, pos, state.setValue(HANGING, true).setValue(AGE, 4));
             this.configureFallingBlockEntity(fallingblockentity);
         }
