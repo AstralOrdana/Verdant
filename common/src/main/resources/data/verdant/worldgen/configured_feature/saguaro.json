@@ -1,0 +1,12 @@
+{
+  "type": "verdant:saguaro",
+  "config": {
+    "height": {
+      "type": "minecraft:uniform",
+      "value": {
+        "min_inclusive": 4,
+        "max_inclusive": 9
+      }
+    }
+  }
+}

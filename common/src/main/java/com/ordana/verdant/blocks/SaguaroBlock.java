@@ -1,9 +1,11 @@
 package com.ordana.verdant.blocks;
 
 import com.ordana.verdant.reg.ModBlocks;
+import com.ordana.verdant.reg.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.ItemStack;
@@ -37,11 +39,15 @@ public class SaguaroBlock extends RotatedPillarBlock implements BonemealableBloc
         this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0).setValue(ATTACHED, true).setValue(AXIS, Direction.Axis.Y));
     }
 
+    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+
+        return !state.getValue(AXIS).isVertical() || (level.getBlockState(pos.below()).is(ModTags.SAGUARO_PLANTABLE_ON));
+    }
+
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (!state.canSurvive(level, pos)) {
             level.destroyBlock(pos, true);
         }
-
     }
 
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
