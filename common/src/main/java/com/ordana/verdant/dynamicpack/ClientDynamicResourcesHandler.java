@@ -135,19 +135,30 @@ public class ClientDynamicResourcesHandler extends DynClientResourcesGenerator {
 
         //bark
         {
-            StaticResource itemModel = StaticResource.getOrLog(manager,
+            StaticResource barkModel = StaticResource.getOrLog(manager,
                     ResType.ITEM_MODELS.getPath(Verdant.res("oak_bark")));
+            StaticResource scaleModel = StaticResource.getOrLog(manager,
+                    ResType.ITEM_MODELS.getPath(Verdant.res("crimson_scales")));
 
             ModItems.BARK.forEach((woodType, bark) -> {
                 if (!woodType.isVanilla() || !PlatHelper.isDev()) {
 
                     String id = Utils.getID(bark).getPath();
 
-                    try {
-                        addSimilarJsonResource(manager,itemModel, "oak_bark", id);
-                    } catch (Exception ex) {
-                        getLogger().error("Failed to generate Bark item model for {} : {}", bark, ex);
+                    if(id.endsWith("scales")) {
+                        try {
+                            addSimilarJsonResource(manager, barkModel, "oak_bark", id);
+                        } catch (Exception ex) {
+                            getLogger().error("Failed to generate Bark item model for {} : {}", bark, ex);
+                        }
+                    } else {
+                        try {
+                            addSimilarJsonResource(manager, scaleModel, "crimson_scales", id);
+                        } catch (Exception ex) {
+                            getLogger().error("Failed to generate Scales item model for {} : {}", bark, ex);
+                        }
                     }
+
                 }
             });
         }
@@ -180,7 +191,7 @@ public class ClientDynamicResourcesHandler extends DynClientResourcesGenerator {
         });
 
         //bark textures
-        try (TextureImage template = TextureImage.open(manager, Verdant.res("item/bark_template"))) {
+        try (TextureImage template = TextureImage.open(manager, Verdant.res("item/bark_template")); TextureImage scalesTemplate = TextureImage.open(manager, Verdant.res("item/scales_template"))) {
 
             ModItems.BARK.forEach((type, bark) -> {
 
@@ -190,14 +201,20 @@ public class ClientDynamicResourcesHandler extends DynClientResourcesGenerator {
                         "item/" + Utils.getID(bark).getPath());
                 if (!alreadyHasTextureAtLocation(manager, textureRes)) {
 
+                    String id = Utils.getID(bark).getPath();
+                    TextureImage tempTemplate = template;
+                    if(id.endsWith("scales"))
+                    {
+                        tempTemplate = scalesTemplate;
+                    }
                     try (TextureImage logTexture = TextureImage.open(manager,
                             RPUtils.findFirstBlockTextureLocation(manager, type.log, s -> !s.contains("top")))) {
                         Palette palette = Palette.fromImage(logTexture);
                         //PaletteColor average = palette.calculateAverage();
                         palette.increaseDown();
                         PaletteColor dark = palette.getDarkest();
-                        assert template.imageWidth() <= logTexture.imageWidth() && template.imageHeight() <= logTexture.imageHeight();
-                        TextureImage newImage = template.makeCopy();
+                        assert tempTemplate.imageWidth() <= logTexture.imageWidth() && tempTemplate.imageHeight() <= logTexture.imageHeight();
+                        TextureImage newImage = tempTemplate.makeCopy();
                         var logImage = logTexture.getImage();
                         newImage.forEachFrame((i, x, y) -> {
                             var image = newImage.getImage();
@@ -227,7 +244,14 @@ public class ClientDynamicResourcesHandler extends DynClientResourcesGenerator {
     @Override
     public void addDynamicTranslations(AfterLanguageLoadEvent lang) {
         ModItems.BARK.forEach((type, bark) -> {
-            LangBuilder.addDynamicEntry(lang, "item.verdant.bark", type, bark);
+            String id = Utils.getID(bark).getPath();
+            if(id.endsWith("scales"))
+            {
+                LangBuilder.addDynamicEntry(lang, "item.verdant.scales", type, bark);
+            }
+            else{
+                LangBuilder.addDynamicEntry(lang, "item.verdant.bark", type, bark);
+            }
         });
         ModBlocks.LEAF_PILES.forEach((type, leaf) -> {
             LangBuilder.addDynamicEntry(lang, "block.verdant.leaf_pile", type, leaf);

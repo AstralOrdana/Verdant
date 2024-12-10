@@ -91,7 +91,7 @@ public class ModBlocks {
             new TallFlowerBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> JUNGLE_FERN = regWithItem("jungle_fern", () ->
             new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
-    public static final Supplier<Block> SAGUARO = regBlock("saguaro", () ->
+    public static final Supplier<Block> SAGUARO_BLOCK = regWithItem("saguaro_block", () ->
             new SaguaroBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> SAGUARO_ARM = regWithItem("saguaro_arm", () ->
             new SaguaroArmBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
@@ -107,6 +107,24 @@ public class ModBlocks {
             new FlowerBlock(MobEffects.DAMAGE_BOOST, 7, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> BLUE_HIBISCUS = regWithItem("blue_hibiscus", () ->
             new FlowerBlock(MobEffects.DAMAGE_BOOST, 7, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+
+    public static final Supplier<Block> POTTED_MUSCARI = regBlock("potted_muscari",
+            () -> new FlowerPotBlock(MUSCARI.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> POTTED_RED_HIBISCUS = regBlock("potted_red_hibiscus",
+            () -> new FlowerPotBlock(RED_HIBISCUS.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> POTTED_PURPLE_HIBISCUS = regBlock("potted_purple_hibiscus",
+            () -> new FlowerPotBlock(PURPLE_HIBISCUS.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> POTTED_BLUE_HIBISCUS = regBlock("potted_blue_hibiscus",
+            () -> new FlowerPotBlock(BLUE_HIBISCUS.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> POTTED_SAGUARO = regBlock("potted_saguaro",
+            () -> new FlowerPotBlock(SAGUARO_ARM.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> POTTED_JUNGLE_FERN = regBlock("potted_jungle_fern",
+            () -> new FlowerPotBlock(JUNGLE_FERN.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> POTTED_MONSTERA = regBlock("potted_monstera",
+            () -> new FlowerPotBlock(MONSTERA.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> POTTED_BOXWOOD = regBlock("potted_boxwood",
+            () -> new FlowerPotBlock(BOXWOOD.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+
 
 
     public static final Supplier<Block> RED_PRIMROSE = regWithItem("red_primrose", () ->

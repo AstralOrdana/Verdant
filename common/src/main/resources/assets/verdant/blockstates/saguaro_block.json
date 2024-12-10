@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "axis=x,attached=true": {
+      "model": "verdant:block/saguaro_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,attached=true": {
+      "model": "verdant:block/saguaro"
+    },
+    "axis=z,attached=true": {
+      "model": "verdant:block/saguaro_horizontal",
+      "x": 90
+    },
+    "axis=x,attached=false": {
+      "model": "verdant:block/saguaro_inside_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y,attached=false": {
+      "model": "verdant:block/saguaro_inside"
+    },
+    "axis=z,attached=false": {
+      "model": "verdant:block/saguaro_inside_horizontal",
+      "x": 90
+    }
+  }
+}

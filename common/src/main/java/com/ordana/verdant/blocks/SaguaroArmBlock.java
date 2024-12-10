@@ -82,7 +82,7 @@ public class SaguaroArmBlock extends Block implements BonemealableBlock {
         if (dir == Direction.DOWN) return belowState.is(ModTags.SAGUARO);
         if (dir == Direction.UP) return belowState.isFaceSturdy(level, pos.below(), dir) || belowState.is(ModTags.SAGUARO);
         var relativePos =  pos.relative(dir.getOpposite());
-        return level.getBlockState(relativePos).isFaceSturdy(level, relativePos, dir) || level.getBlockState(relativePos).is(ModBlocks.SAGUARO.get());
+        return level.getBlockState(relativePos).isFaceSturdy(level, relativePos, dir) || level.getBlockState(relativePos).is(ModBlocks.SAGUARO_BLOCK.get());
     }
 
     @Nullable
@@ -104,16 +104,25 @@ public class SaguaroArmBlock extends Block implements BonemealableBlock {
 
     @Override
     public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
-        return true;
+        return (level.isEmptyBlock(pos.above()) || level.getBlockState(pos.above()).is(ModBlocks.SAGUARO_ARM.get())) && level.isEmptyBlock(pos.above().above());
     }
 
     @Override
     public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
-        return state.getValue(FACING) == Direction.DOWN || state.getValue(FACING) == Direction.UP;
+        return true;
     }
 
     @Override
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
-        level.setBlockAndUpdate(pos, ModBlocks.SAGUARO.get().defaultBlockState().setValue(BlockStateProperties.ATTACHED, state.getValue(FACING) == Direction.DOWN));
+        var dir = state.getValue(FACING);
+        if (dir == Direction.DOWN) {
+            level.setBlockAndUpdate(pos, ModBlocks.SAGUARO_ARM.get().defaultBlockState().setValue(FACING, Direction.UP));
+            if (level.isEmptyBlock(pos.above())) level.setBlockAndUpdate(pos.above(), ModBlocks.SAGUARO_ARM.get().defaultBlockState().setValue(FACING, Direction.DOWN));
+        }
+        else {
+            if (level.isEmptyBlock(pos.above()) || level.getBlockState(pos.above()).is(ModBlocks.SAGUARO_ARM.get())) level.setBlockAndUpdate(pos.above(), ModBlocks.SAGUARO_ARM.get().defaultBlockState().setValue(FACING, Direction.UP));
+            if (level.isEmptyBlock(pos.above().above())) level.setBlockAndUpdate(pos.above().above(), ModBlocks.SAGUARO_ARM.get().defaultBlockState().setValue(FACING, Direction.DOWN));
+        }
+
     }
 }

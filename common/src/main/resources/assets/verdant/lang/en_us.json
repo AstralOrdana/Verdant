@@ -40,6 +40,7 @@
   "block.verdant.jungle_fern": "Jungle Fern",
   "block.verdant.monstera": "Monstera",
   "block.verdant.saguaro_arm": "Saguaro",
+  "block.verdant.saguaro_block": "Saguaro Block",
 
   "block.verdant.muscari": "Muscari",
   "block.verdant.red_primrose": "Red Primrose",
@@ -66,6 +67,7 @@
   "item.verdant.crimson_scales": "Crimson Scales",
   "item.verdant.warped_scales": "Warped Scales",
   "item.verdant.bark": "%s Bark",
+  "item.verdant.scales": "%s Scales",
 
   "block.verdant.azalea_flower_pile": "Azalea Flower Pile",
   "block.verdant.leaf_pile": "%s Leaf Pile"

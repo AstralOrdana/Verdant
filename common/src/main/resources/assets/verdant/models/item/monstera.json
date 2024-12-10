@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "verdant:block/monstera_bottom"
+    "layer0": "verdant:item/monstera"
   }
 }

@@ -60,6 +60,15 @@ public class VerdantClient {
         ClientHelper.registerRenderType(ModBlocks.PURPLE_HIBISCUS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.BLUE_HIBISCUS.get(), RenderType.cutoutMipped());
 
+        ClientHelper.registerRenderType(ModBlocks.POTTED_BOXWOOD.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_MUSCARI.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_MONSTERA.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_JUNGLE_FERN.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_RED_HIBISCUS.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_PURPLE_HIBISCUS.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_BLUE_HIBISCUS.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_SAGUARO.get(), RenderType.cutoutMipped());
+
         ClientHelper.registerRenderType(ModBlocks.RED_PRIMROSE.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.ORANGE_PRIMROSE.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.YELLOW_PRIMROSE.get(), RenderType.cutoutMipped());
@@ -112,6 +121,7 @@ public class VerdantClient {
         event.register(ModParticles.FLOWER_FLAX.get(), LeafParticle.SimpleLeafParticle::new);
         event.register(ModParticles.FLOWER_NEKOMASTER.get(), LeafParticle.SimpleLeafParticle::new);
         event.register(ModParticles.FLOWER_AKASHII.get(), LeafParticle.SimpleLeafParticle::new);
+        event.register(ModParticles.FLOWER_MOOFELLOW.get(), LeafParticle.SimpleLeafParticle::new);
     }
 
     @EventCalled
@@ -129,6 +139,7 @@ public class VerdantClient {
 
         //spruce leaves tint
         event.register((blockState, level, blockPos, i) -> event.getColor(Blocks.SPRUCE_LEAVES.defaultBlockState(), level, blockPos, i),
+                ModBlocks.POTTED_BOXWOOD.get(),
                 ModBlocks.BOXWOOD.get());
 
         //with exception for particles
@@ -172,8 +183,6 @@ public class VerdantClient {
         });
 
         event.register((itemStack, i) -> event.getColor(Items.GRASS_BLOCK.getDefaultInstance(), i),
-                ModBlocks.JUNGLE_FERN.get(),
-                ModBlocks.MONSTERA.get(),
                 ModBlocks.DENSE_GRASS.get());
 
     }

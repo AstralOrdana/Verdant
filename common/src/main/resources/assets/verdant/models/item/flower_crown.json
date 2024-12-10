@@ -111,6 +111,12 @@
         "verdant:supporter": 0.32
       },
       "model": "verdant:item/flower_crown_akashii"
+    },
+    {
+      "predicate": {
+        "verdant:supporter": 0.33
+      },
+      "model": "verdant:item/flower_crown_moofellow"
     }
   ]
 }

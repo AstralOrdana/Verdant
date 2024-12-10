@@ -7,7 +7,7 @@
   "elements": [
     {
       "from": [0, -1.79, 8],
-      "to": [8, -1.79, 16],
+      "to": [8, -1.75, 16],
       "faces": {
         "up": {"uv": [0, 8, 8, 16], "texture": "#flowerbed"},
         "down": {"uv": [0, 16, 8, 8], "texture": "#flowerbed"}

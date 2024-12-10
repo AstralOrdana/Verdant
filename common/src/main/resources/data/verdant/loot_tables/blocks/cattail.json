@@ -16,11 +16,6 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_count"
-            }
-          ],
           "name": "verdant:cattail"
         }
       ],

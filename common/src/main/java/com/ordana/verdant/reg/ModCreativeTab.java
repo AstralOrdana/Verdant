@@ -38,6 +38,11 @@ public class ModCreativeTab {
                 ModBlocks.CATTAIL
         );
 
+        after(e, Items.CACTUS, CreativeModeTabs.NATURAL_BLOCKS,
+                ModBlocks.SAGUARO_BLOCK,
+                ModBlocks.SAGUARO_ARM
+        );
+
         after(e, Items.LILY_OF_THE_VALLEY, CreativeModeTabs.NATURAL_BLOCKS,
                 ModBlocks.RED_HIBISCUS, ModBlocks.PURPLE_HIBISCUS, ModBlocks.BLUE_HIBISCUS,
                 ModBlocks.MUSCARI,

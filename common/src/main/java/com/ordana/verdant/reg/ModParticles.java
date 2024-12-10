@@ -42,6 +42,7 @@ public class ModParticles {
     public static final Supplier<SimpleParticleType> FLOWER_FLAX = registerParticle("flower_flax");
     public static final Supplier<SimpleParticleType> FLOWER_NEKOMASTER = registerParticle("flower_nekomaster");
     public static final Supplier<SimpleParticleType> FLOWER_AKASHII = registerParticle("flower_akashii");
+    public static final Supplier<SimpleParticleType> FLOWER_MOOFELLOW = registerParticle("flower_moofellow");
 
     //dev and gift particles
     public static final Supplier<SimpleParticleType> FLOWER_BEE = registerParticle("flower_bee");

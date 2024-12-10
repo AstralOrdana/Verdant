@@ -24,6 +24,8 @@ public class ModCompostable {
         RegHelper.registerCompostable(ModBlocks.BLUE_HIBISCUS.get().asItem(), 0.2f);
         RegHelper.registerCompostable(ModBlocks.JUNGLE_FERN.get().asItem(), 0.3f);
         RegHelper.registerCompostable(ModBlocks.MONSTERA.get().asItem(), 0.3f);
+        RegHelper.registerCompostable(ModBlocks.SAGUARO_BLOCK.get().asItem(), 0.5f);
+        RegHelper.registerCompostable(ModBlocks.SAGUARO_ARM.get().asItem(), 0.3f);
 
         RegHelper.registerCompostable(ModBlocks.RED_PRIMROSE.get().asItem(), 0.2f);
         RegHelper.registerCompostable(ModBlocks.ORANGE_PRIMROSE.get().asItem(), 0.2f);

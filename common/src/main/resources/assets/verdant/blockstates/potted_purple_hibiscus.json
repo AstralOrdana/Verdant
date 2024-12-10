@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": {
+      "model": "verdant:block/potted_purple_hibiscus"
+    }
+  }
+}
+"trunk": "verdant:block/boxwood",
+"overlay": "verdant:block/boxwood_overlay",
+"particle": "block/flower_pot",
+"pot": "block/flower_pot",
+"dirt": "block/dirt"

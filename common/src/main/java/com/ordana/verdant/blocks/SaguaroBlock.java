@@ -11,7 +11,10 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BonemealableBlock;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -23,7 +26,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class SaguaroBlock extends Block {
+public class SaguaroBlock extends RotatedPillarBlock implements BonemealableBlock {
     public static final IntegerProperty AGE;
     public static final BooleanProperty ATTACHED = BlockStateProperties.ATTACHED;
     protected static final VoxelShape COLLISION_SHAPE;
@@ -31,7 +34,7 @@ public class SaguaroBlock extends Block {
 
     public SaguaroBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0).setValue(ATTACHED, false));
+        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0).setValue(ATTACHED, true).setValue(AXIS, Direction.Axis.Y));
     }
 
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
@@ -39,10 +42,6 @@ public class SaguaroBlock extends Block {
             level.destroyBlock(pos, true);
         }
 
-    }
-
-    public ItemStack getCloneItemStack(BlockGetter level, BlockPos pos, BlockState state) {
-        return new ItemStack(ModBlocks.SAGUARO_ARM.get());
     }
 
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
@@ -76,6 +75,7 @@ public class SaguaroBlock extends Block {
     }
 
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+        if (state.getValue(AXIS).isVertical() && level.getBlockState(pos.above()).is(this)) return state.setValue(ATTACHED, false);
         if (!state.canSurvive(level, pos)) {
             level.scheduleTick(pos, this, 1);
         }
@@ -88,7 +88,7 @@ public class SaguaroBlock extends Block {
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(AGE, ATTACHED);
+        builder.add(AGE, ATTACHED, AXIS);
     }
 
     public boolean isPathfindable(BlockState state, BlockGetter level, BlockPos pos, PathComputationType type) {
@@ -99,5 +99,28 @@ public class SaguaroBlock extends Block {
         AGE = BlockStateProperties.AGE_15;
         COLLISION_SHAPE = Block.box(1.0, 0.0, 1.0, 15.0, 15.0, 15.0);
         OUTLINE_SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
+    }
+
+    @Override
+    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
+        return true;
+    }
+
+    @Override
+    public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
+        var i = 0;
+        for(Direction dir : Direction.Plane.HORIZONTAL) {
+            if (!level.isEmptyBlock(pos.relative(dir))) i += 1;
+        }
+
+        return i < 4;
+    }
+
+    @Override
+    public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
+        var dir = Direction.Plane.HORIZONTAL.getRandomDirection(random);
+        if (level.isEmptyBlock(pos.relative(dir))) level.setBlockAndUpdate(pos.relative(dir), ModBlocks.SAGUARO_ARM.get().defaultBlockState().setValue(BlockStateProperties.FACING, dir));
+        if (level.isEmptyBlock(pos.relative(dir).above())) level.setBlockAndUpdate(pos.relative(dir).above(), ModBlocks.SAGUARO_ARM.get().defaultBlockState().setValue(BlockStateProperties.FACING, Direction.DOWN));
+
     }
 }
