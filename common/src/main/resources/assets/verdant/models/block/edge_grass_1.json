@@ -1,0 +1,17 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "1": "verdant:block/edge_grass",
+    "particle": "verdant:block/edge_grass"
+  },
+  "elements": [
+    {
+      "from": [0, 0, 0.01],
+      "to": [16, 5, 0.01],
+      "faces": {
+        "north": {"uv": [0, 1, 16, 6], "rotation": 180, "texture": "#1", "tintindex": 0},
+        "south": {"uv": [0, 1, 16, 6], "rotation": 180, "texture": "#1", "tintindex": 0}
+      }
+    }
+  ]
+}

@@ -46,6 +46,8 @@ public class VerdantClient {
         ClientHelper.registerRenderType(ModBlocks.MOSS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.WEEDS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.BARLEY.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.EDGE_GRASS.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.DOGWOOD.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.DUNE_GRASS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.CATTAIL.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.DENSE_GRASS.get(), RenderType.cutoutMipped());
@@ -135,6 +137,7 @@ public class VerdantClient {
         event.register((blockState, level, blockPos, i) -> event.getColor(Blocks.GRASS_BLOCK.defaultBlockState(), level, blockPos, i),
                 ModBlocks.JUNGLE_FERN.get(),
                 ModBlocks.MONSTERA.get(),
+                ModBlocks.EDGE_GRASS.get(),
                 ModBlocks.DENSE_GRASS.get());
 
         //spruce leaves tint
@@ -183,6 +186,7 @@ public class VerdantClient {
         });
 
         event.register((itemStack, i) -> event.getColor(Items.GRASS_BLOCK.getDefaultInstance(), i),
+                ModBlocks.EDGE_GRASS.get(),
                 ModBlocks.DENSE_GRASS.get());
 
     }

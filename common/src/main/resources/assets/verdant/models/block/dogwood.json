@@ -1,0 +1,6 @@
+{
+	"parent": "verdant:block/bush_grass",
+	"textures": {
+		"grass": "verdant:block/dogwood"
+	}
+}

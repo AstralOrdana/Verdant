@@ -30,7 +30,7 @@ public class ModCreativeTab {
         );
 
         after(e, Items.FERN, CreativeModeTabs.NATURAL_BLOCKS,
-                ModBlocks.JUNGLE_FERN, ModBlocks.CLOVER, ModBlocks.DUNE_GRASS, ModBlocks.BARLEY, ModBlocks.DENSE_GRASS, ModBlocks.MONSTERA, ModBlocks.BOXWOOD
+                ModBlocks.JUNGLE_FERN, ModBlocks.CLOVER, ModBlocks.DUNE_GRASS, ModBlocks.DOGWOOD, ModBlocks.EDGE_GRASS, ModBlocks.BARLEY, ModBlocks.DENSE_GRASS, ModBlocks.MONSTERA, ModBlocks.BOXWOOD
         );
 
         after(e, Items.LILY_PAD, CreativeModeTabs.NATURAL_BLOCKS,

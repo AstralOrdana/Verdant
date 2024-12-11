@@ -23,6 +23,7 @@ import net.minecraft.world.level.material.PushReaction;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Properties;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -74,6 +75,10 @@ public class ModBlocks {
             new MossMultifaceBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).randomTicks().instabreak().sound(SoundType.MOSS_CARPET).noOcclusion().noCollission()));
     public static final Supplier<Block> WEEDS = regWithItem("weeds", () ->
             new WeedsBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().instabreak().sound(SoundType.GRASS)));
+    public static final Supplier<Block> EDGE_GRASS = regWithItem("edge_grass", () ->
+            new EdgeGrassBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(SoundType.GRASS).noOcclusion().replaceable()));
+    public static final Supplier<Block> DOGWOOD = regWithItem("dogwood", () ->
+            new DuneGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().instabreak().sound(SoundType.GRASS)));
     public static final Supplier<Block> DUNE_GRASS = regWithItem("dune_grass", () ->
             new DuneGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().instabreak().sound(SoundType.GRASS)));
     public static final Supplier<Block> BARLEY = regWithItem("barley", () ->
