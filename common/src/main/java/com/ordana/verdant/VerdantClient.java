@@ -172,10 +172,6 @@ public class VerdantClient {
                 ModBlocks.LIGHT_GRAY_PRIMROSE.get(),
                 ModBlocks.BROWN_PRIMROSE.get(),
                 ModBlocks.BARLEY.get());
-
-        //aloe
-        event.register((blockState, level, blockPos, i) -> getAloeColor(event, blockState, level, blockPos, i),
-                ModBlocks.ALOE_VERA.get());
     }
 
     private static int getLeafTypeColor(ClientHelper.BlockColorEvent event, LeavesType type, BlockState state, BlockAndTintGetter level, BlockPos pos, int i) {
@@ -186,14 +182,6 @@ public class VerdantClient {
         int brown = 0x7D5212;
         return new RGBColor(original).asLAB().mixWith(new RGBColor(brown).asLAB(), percentage).asRGB().toInt();
     }
-
-    private static int getAloeColor(ClientHelper.BlockColorEvent event, BlockState state, BlockAndTintGetter level, BlockPos pos, int i) {
-
-        Random posRandom = new Random(Mth.getSeed(pos));
-        int brown = (int) (0xf0f0f0 * posRandom.nextFloat());
-        return new RGBColor(brown).asLAB().asRGB().toInt();
-    }
-
 
     private static void registerItemColors(ClientHelper.ItemColorEvent event) {
         ModItems.LEAF_PILES.forEach((type, leafPile) -> {
