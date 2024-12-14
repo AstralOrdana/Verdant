@@ -97,7 +97,7 @@ public class ModBlocks {
     public static final Supplier<Block> MONSTERA = regWithItem("monstera", () ->
             new TallFlowerBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> JUNGLE_FERN = regWithItem("jungle_fern", () ->
-            new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+            new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).replaceable().noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> SAGUARO_BLOCK = regWithItem("saguaro_block", () ->
             new SaguaroBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> SAGUARO_ARM = regWithItem("saguaro_arm", () ->

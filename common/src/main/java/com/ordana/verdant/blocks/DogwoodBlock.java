@@ -14,6 +14,6 @@ public class DogwoodBlock extends BushBlock {
 
   @Override
   protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
-    return state.is(BlockTags.DIRT) || state.is(Blocks.SNOW);
+    return state.is(BlockTags.DIRT) || state.is(Blocks.SNOW_BLOCK);
   }
 }
