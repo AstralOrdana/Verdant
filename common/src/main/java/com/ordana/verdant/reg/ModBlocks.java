@@ -78,11 +78,13 @@ public class ModBlocks {
     public static final Supplier<Block> EDGE_GRASS = regWithItem("edge_grass", () ->
             new EdgeGrassBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(SoundType.GRASS).noOcclusion().replaceable()));
     public static final Supplier<Block> DOGWOOD = regWithItem("dogwood", () ->
-            new DuneGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().instabreak().sound(SoundType.GRASS)));
+            new DogwoodBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().strength(3.0f).offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.GRASS)));
     public static final Supplier<Block> DUNE_GRASS = regWithItem("dune_grass", () ->
-            new DuneGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().instabreak().sound(SoundType.GRASS)));
+            new DuneGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().instabreak().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.GRASS)));
     public static final Supplier<Block> BARLEY = regWithItem("barley", () ->
             new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).replaceable().noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XYZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> ALOE_VERA = regWithItem("aloe_vera", () ->
+            new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> CATTAIL = regWithItem("cattail", () ->
             new CattailBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).replaceable().noCollission().instabreak().sound(SoundType.WET_GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> DENSE_GRASS = regWithItem("dense_grass", () ->

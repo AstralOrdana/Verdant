@@ -17,10 +17,13 @@ import net.mehvahdjukaar.moonlight.api.util.math.colors.RGBColor;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.BlockPos;
+import net.minecraft.util.Mth;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.Random;
 
 public class VerdantClient {
 
@@ -46,6 +49,7 @@ public class VerdantClient {
         ClientHelper.registerRenderType(ModBlocks.MOSS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.WEEDS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.BARLEY.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.ALOE_VERA.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.EDGE_GRASS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.DOGWOOD.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.DUNE_GRASS.get(), RenderType.cutoutMipped());
@@ -168,6 +172,10 @@ public class VerdantClient {
                 ModBlocks.LIGHT_GRAY_PRIMROSE.get(),
                 ModBlocks.BROWN_PRIMROSE.get(),
                 ModBlocks.BARLEY.get());
+
+        //aloe
+        event.register((blockState, level, blockPos, i) -> getAloeColor(event, blockState, level, blockPos, i),
+                ModBlocks.ALOE_VERA.get());
     }
 
     private static int getLeafTypeColor(ClientHelper.BlockColorEvent event, LeavesType type, BlockState state, BlockAndTintGetter level, BlockPos pos, int i) {
@@ -177,6 +185,13 @@ public class VerdantClient {
         float percentage = state.getValue(LeafPileBlock.AGE) / 10f;
         int brown = 0x7D5212;
         return new RGBColor(original).asLAB().mixWith(new RGBColor(brown).asLAB(), percentage).asRGB().toInt();
+    }
+
+    private static int getAloeColor(ClientHelper.BlockColorEvent event, BlockState state, BlockAndTintGetter level, BlockPos pos, int i) {
+
+        Random posRandom = new Random(Mth.getSeed(pos));
+        int brown = (int) (0xf0f0f0 * posRandom.nextFloat());
+        return new RGBColor(brown).asLAB().asRGB().toInt();
     }
 
 

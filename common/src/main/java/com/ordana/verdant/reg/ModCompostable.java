@@ -17,6 +17,8 @@ public class ModCompostable {
         RegHelper.registerCompostable(ModBlocks.DUCKWEED.get().asItem(), 0.1f);
         RegHelper.registerCompostable(ModBlocks.CATTAIL.get().asItem(), 0.3f);
         RegHelper.registerCompostable(ModBlocks.MUSCARI.get().asItem(), 0.2f);
+        RegHelper.registerCompostable(ModBlocks.BARLEY.get().asItem(), 0.2f);
+        RegHelper.registerCompostable(ModBlocks.ALOE_VERA.get().asItem(), 0.2f);
         RegHelper.registerCompostable(ModBlocks.DENSE_GRASS.get().asItem(), 0.4f);
         RegHelper.registerCompostable(ModBlocks.EDGE_GRASS.get().asItem(), 0.15f);
         RegHelper.registerCompostable(ModBlocks.BOXWOOD.get().asItem(), 0.5f);
