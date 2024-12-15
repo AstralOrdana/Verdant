@@ -130,6 +130,12 @@ public class ModBlocks {
             () -> new FlowerPotBlock(MONSTERA.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
     public static final Supplier<Block> POTTED_BOXWOOD = regBlock("potted_boxwood",
             () -> new FlowerPotBlock(BOXWOOD.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
+    public static final Supplier<Block> POTTED_PEONY = regBlock("potted_peony",
+            () -> new FlowerPotBlock(Blocks.PEONY, BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
+    public static final Supplier<Block> POTTED_LILAC = regBlock("potted_lilac",
+            () -> new FlowerPotBlock(Blocks.LILAC, BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
+    public static final Supplier<Block> POTTED_ROSE = regBlock("potted_rose",
+            () -> new FlowerPotBlock(Blocks.ROSE_BUSH, BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
 
 
 

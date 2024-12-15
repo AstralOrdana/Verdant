@@ -74,6 +74,9 @@ public class VerdantClient {
         ClientHelper.registerRenderType(ModBlocks.POTTED_PURPLE_HIBISCUS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.POTTED_BLUE_HIBISCUS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.POTTED_SAGUARO.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_PEONY.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_LILAC.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_ROSE.get(), RenderType.cutoutMipped());
 
         ClientHelper.registerRenderType(ModBlocks.RED_PRIMROSE.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.ORANGE_PRIMROSE.get(), RenderType.cutoutMipped());
