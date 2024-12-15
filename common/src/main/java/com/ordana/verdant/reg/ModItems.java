@@ -33,19 +33,13 @@ public class ModItems {
         return RegHelper.registerItem(Verdant.res(name), itemSup);
     }
 
-    //helpers
-
-    private static Supplier<BlockItem> regLeafPile(String name, Supplier<LeafPileBlock> oakLeafPile) {
-        return regItem(name, () -> new LeafPileBlockItem(oakLeafPile.get(), new Item.Properties()));
-    }
 
     //leaf pile
     public static final Map<LeavesType, BlockItem> LEAF_PILES = new LinkedHashMap<>();
-    public static final Supplier<BlockItem> AZALEA_FLOWER_PILE = regLeafPile("azalea_flower_pile", ModBlocks.AZALEA_FLOWER_PILE);
 
     //flowers
     public static final Supplier<Item> AZALEA_FLOWERS = regItem("azalea_flowers", () ->
-            new AzaleaFlowersItem(new Item.Properties()));
+            new AzaleaFlowersItem(ModBlocks.AZALEA_FLOWER_PILE.get(), new Item.Properties()));
     public static final Supplier<Item> FLOWER_CROWN = regItem("flower_crown", () ->
             new FlowerCrownItem(FlowerCrownMaterial.INSTANCE, ArmorItem.Type.HELMET,
                     new Item.Properties()));

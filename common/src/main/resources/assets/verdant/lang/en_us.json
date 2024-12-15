@@ -22,7 +22,7 @@
   "config.verdant.item_interaction.drop_in_creative": "Interaction Items Drop in Creative",
   "config.verdant.general.creative_tab": "IW Creative Tab",
 
-  "item.verdant.azalea_flowers": "Azalea Flowers",
+  "block.verdant.azalea_flower_pile": "Azalea Flowers",
   "item.verdant.flower_crown": "Flower Crown",
   "block.verdant.moss": "Moss Clump",
   "item.verdant.golden_moss_clump": "Golden Moss Clump",
@@ -72,6 +72,5 @@
   "item.verdant.bark": "%s Bark",
   "item.verdant.scales": "%s Scales",
 
-  "block.verdant.azalea_flower_pile": "Azalea Flower Pile",
   "block.verdant.leaf_pile": "%s Leaf Pile"
 }

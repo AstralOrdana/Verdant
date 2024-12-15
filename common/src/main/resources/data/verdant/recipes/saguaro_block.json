@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###"
+    "##",
+    "##"
   ],
   "key": {
     "#": {
-      "item": "verdant:azalea_flowers"
+      "item": "verdant:saguaro_arm"
     }
   },
   "result": {
-    "item": "verdant:azalea_flower_pile",
-    "count": 6
+    "item": "verdant:saguaro_block"
   }
 }

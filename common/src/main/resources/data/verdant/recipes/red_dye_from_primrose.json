@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "verdant:red_primrose"
+    }
+  ],
+  "result": {
+    "item": "minecraft:red_dye"
+  }
+}

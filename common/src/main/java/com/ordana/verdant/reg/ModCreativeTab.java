@@ -25,20 +25,28 @@ public class ModCreativeTab {
 
     public static void addItems(RegHelper.ItemToTabEvent e) {
 
-        after(e, Items.MOSS_CARPET, CreativeModeTabs.NATURAL_BLOCKS,
-                ModItems.MOSS_CLUMP
-        );
-
         after(e, Items.FERN, CreativeModeTabs.NATURAL_BLOCKS,
-                ModBlocks.JUNGLE_FERN, ModBlocks.EDGE_GRASS, ModBlocks.DUNE_GRASS, ModBlocks.ALOE_VERA, ModBlocks.DOGWOOD, ModBlocks.BARLEY, ModBlocks.DENSE_GRASS,  ModBlocks.CLOVER, ModBlocks.MONSTERA, ModBlocks.BOXWOOD
+                ModBlocks.BARLEY,
+                ModBlocks.CLOVER,
+                ModBlocks.DENSE_GRASS,
+                ModBlocks.EDGE_GRASS,
+                ModBlocks.WEEDS,
+
+                ModBlocks.JUNGLE_FERN,
+                ModBlocks.MONSTERA,
+                ModBlocks.IVY,
+                ModBlocks.DOGWOOD,
+                ModBlocks.BOXWOOD
         );
 
         after(e, Items.LILY_PAD, CreativeModeTabs.NATURAL_BLOCKS,
-                ModBlocks.DUCKWEED,
-                ModBlocks.CATTAIL
+                ModBlocks.CATTAIL,
+                ModBlocks.DUCKWEED
         );
 
         after(e, Items.CACTUS, CreativeModeTabs.NATURAL_BLOCKS,
+                ModBlocks.DUNE_GRASS,
+                ModBlocks.ALOE_VERA,
                 ModBlocks.SAGUARO_BLOCK,
                 ModBlocks.SAGUARO_ARM
         );
@@ -64,35 +72,17 @@ public class ModCreativeTab {
                 ModBlocks.BROWN_PRIMROSE
         );
 
-        after(e, Items.FLOWERING_AZALEA_LEAVES, CreativeModeTabs.NATURAL_BLOCKS,
-                ModItems.AZALEA_FLOWER_PILE
-        );
-
-        after(e, Items.FLOWERING_AZALEA_LEAVES, CreativeModeTabs.NATURAL_BLOCKS,
-                ModBlocks.LEAF_PILES.values().stream().map(s-> (Supplier<Object>) () -> s).toArray(Supplier[]::new)
-        );
-
-        after(e, Items.VINE, CreativeModeTabs.NATURAL_BLOCKS,
-                ModBlocks.IVY
-        );
-
-        after(e, Items.BEETROOT_SEEDS, CreativeModeTabs.NATURAL_BLOCKS,
-                ModBlocks.WEEDS
-        );
-
-
-        //FOOD
-        after(e, Items.ENCHANTED_GOLDEN_APPLE, CreativeModeTabs.FOOD_AND_DRINKS,
+        after(e, Items.MOSS_CARPET, CreativeModeTabs.NATURAL_BLOCKS,
                 ModItems.MOSS_CLUMP, ModItems.GOLDEN_MOSS_CLUMP, ModItems.ENCHANTED_GOLDEN_MOSS_CLUMP
         );
 
-
-        before(e, Items.LEATHER_HELMET, CreativeModeTabs.COMBAT,
-                ModItems.FLOWER_CROWN
+        before(e, Items.INK_SAC, CreativeModeTabs.INGREDIENTS,
+                ModItems.AZALEA_FLOWERS, ModItems.FLOWER_CROWN
         );
 
-        before(e, Items.INK_SAC, CreativeModeTabs.INGREDIENTS,
-                ModItems.AZALEA_FLOWERS
+
+        after(e, Items.FLOWERING_AZALEA_LEAVES, CreativeModeTabs.NATURAL_BLOCKS,
+                ModBlocks.LEAF_PILES.values().stream().map(s-> (Supplier<Object>) () -> s).toArray(Supplier[]::new)
         );
 
         before(e, Items.INK_SAC, CreativeModeTabs.INGREDIENTS,

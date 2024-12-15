@@ -2,10 +2,13 @@ package com.ordana.verdant.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
@@ -20,7 +23,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class CattailBlock extends DoublePlantBlock implements LiquidBlockContainer {
+public class CattailBlock extends DoublePlantBlock implements LiquidBlockContainer, BonemealableBlock {
     public static final EnumProperty<DoubleBlockHalf> HALF;
     protected static final float AABB_OFFSET = 6.0F;
     protected static final VoxelShape SHAPE;
@@ -75,5 +78,20 @@ public class CattailBlock extends DoublePlantBlock implements LiquidBlockContain
     static {
         HALF = DoublePlantBlock.HALF;
         SHAPE = Block.box(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
+    }
+
+    @Override
+    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
+        return true;
+    }
+
+    @Override
+    public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
+        return true;
+    }
+
+    @Override
+    public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
+        if (random.nextBoolean()) popResource(level, pos, new ItemStack(this));
     }
 }

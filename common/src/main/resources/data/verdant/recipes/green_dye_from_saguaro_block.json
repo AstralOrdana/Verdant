@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "verdant:moss_clump"
+    "item": "verdant:saguaro_block"
   },
   "result": "minecraft:green_dye",
-  "experience": 0.1,
+  "experience": 1.5,
   "cookingtime": 200
 }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "verdant:muscari"
+    }
+  ],
+  "result": {
+    "item": "minecraft:purple_dye"
+  }
+}
