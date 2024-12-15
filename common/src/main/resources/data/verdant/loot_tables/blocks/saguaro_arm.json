@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "verdant:saguaro_arm",
+          "conditions": [
+            {
+              "condition": "minecraft:inverted",
+              "term": {
+                "condition": "minecraft:block_state_property",
+                "block": "verdant:saguaro_arm",
+                "properties": {
+                  "facing": "down"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

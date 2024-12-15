@@ -20,6 +20,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -155,69 +156,31 @@ public class WeatheringHelper {
         return Optional.empty();
     }
 
-    public static final Supplier<BiMap<Block, Block>> RAW_TO_STRIPPED = Suppliers.memoize(() -> {
-        var builder = ImmutableBiMap.<Block, Block>builder()
-            .put(Blocks.OAK_LOG, Blocks.STRIPPED_OAK_LOG)
-            .put(Blocks.BIRCH_LOG, Blocks.STRIPPED_BIRCH_LOG)
-            .put(Blocks.JUNGLE_LOG, Blocks.STRIPPED_JUNGLE_LOG)
-            .put(Blocks.SPRUCE_LOG, Blocks.STRIPPED_SPRUCE_LOG)
-            .put(Blocks.ACACIA_LOG, Blocks.STRIPPED_ACACIA_LOG)
-            .put(Blocks.DARK_OAK_LOG, Blocks.STRIPPED_DARK_OAK_LOG)
-            .put(Blocks.MANGROVE_LOG, Blocks.STRIPPED_MANGROVE_LOG)
-            .put(Blocks.CHERRY_LOG, Blocks.STRIPPED_CHERRY_LOG)
-            .put(Blocks.BAMBOO_BLOCK, Blocks.STRIPPED_BAMBOO_BLOCK)
-            .put(Blocks.CRIMSON_STEM, Blocks.STRIPPED_CRIMSON_STEM)
-            .put(Blocks.WARPED_STEM, Blocks.STRIPPED_WARPED_STEM)
-            .put(Blocks.OAK_WOOD, Blocks.STRIPPED_OAK_WOOD)
-            .put(Blocks.BIRCH_WOOD, Blocks.STRIPPED_BIRCH_WOOD)
-            .put(Blocks.JUNGLE_WOOD, Blocks.STRIPPED_JUNGLE_WOOD)
-            .put(Blocks.SPRUCE_WOOD, Blocks.STRIPPED_SPRUCE_WOOD)
-            .put(Blocks.ACACIA_WOOD, Blocks.STRIPPED_ACACIA_WOOD)
-            .put(Blocks.DARK_OAK_WOOD, Blocks.STRIPPED_DARK_OAK_WOOD)
-            .put(Blocks.MANGROVE_WOOD, Blocks.STRIPPED_MANGROVE_WOOD)
-            .put(Blocks.CHERRY_WOOD, Blocks.STRIPPED_CHERRY_WOOD)
-            .put(Blocks.CRIMSON_HYPHAE, Blocks.STRIPPED_CRIMSON_HYPHAE)
-            .put(Blocks.WARPED_HYPHAE, Blocks.STRIPPED_WARPED_HYPHAE);
+    public static final Supplier<BiMap<DyeColor, Block>> COLOR_TO_PRIMROSE = Suppliers.memoize(() -> {
+        var builder = ImmutableBiMap.<DyeColor, Block>builder()
+                .put(DyeColor.RED, ModBlocks.RED_PRIMROSE.get())
+                .put(DyeColor.ORANGE, ModBlocks.ORANGE_PRIMROSE.get())
+                .put(DyeColor.YELLOW, ModBlocks.YELLOW_PRIMROSE.get())
+                .put(DyeColor.LIME, ModBlocks.LIME_PRIMROSE.get())
+                .put(DyeColor.GREEN, ModBlocks.GREEN_PRIMROSE.get())
+                .put(DyeColor.CYAN, ModBlocks.CYAN_PRIMROSE.get())
+                .put(DyeColor.BLUE, ModBlocks.BLUE_PRIMROSE.get())
+                .put(DyeColor.LIGHT_BLUE, ModBlocks.LIGHT_BLUE_PRIMROSE.get())
+                .put(DyeColor.PURPLE, ModBlocks.PURPLE_PRIMROSE.get())
+                .put(DyeColor.MAGENTA, ModBlocks.MAGENTA_PRIMROSE.get())
+                .put(DyeColor.PINK, ModBlocks.PINK_PRIMROSE.get())
+                .put(DyeColor.WHITE, ModBlocks.WHITE_PRIMROSE.get())
+                .put(DyeColor.LIGHT_GRAY, ModBlocks.LIGHT_GRAY_PRIMROSE.get())
+                .put(DyeColor.GRAY, ModBlocks.GRAY_PRIMROSE.get())
+                .put(DyeColor.BLACK, ModBlocks.BLACK_PRIMROSE.get())
+                .put(DyeColor.BROWN, ModBlocks.BROWN_PRIMROSE.get());
         return builder.build();
     });
 
-    public static final Supplier<BiMap<Block, Block>> STRIPPED_TO_RAW = Suppliers.memoize(() -> RAW_TO_STRIPPED.get().inverse());
-
-    public static final Supplier<BiMap<Block, Item>> WOOD_TO_BARK = Suppliers.memoize(() -> {
-        var builder = ImmutableBiMap.<Block, Item>builder()
-            .put(Blocks.OAK_LOG,       ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("oak"))))
-            .put(Blocks.BIRCH_LOG,     ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("birch"))))
-            .put(Blocks.JUNGLE_LOG,    ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("jungle"))))
-            .put(Blocks.SPRUCE_LOG,    ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("spruce"))))
-            .put(Blocks.ACACIA_LOG,    ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("acacia"))))
-            .put(Blocks.DARK_OAK_LOG,  ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("dark_oak"))))
-            .put(Blocks.MANGROVE_LOG,  ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("mangrove"))))
-            .put(Blocks.CHERRY_LOG,    ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("cherry"))))
-            .put(Blocks.BAMBOO_BLOCK,  ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("bamboo"))))
-            .put(Blocks.CRIMSON_STEM,  ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("crimson"))))
-            .put(Blocks.WARPED_STEM,   ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("warped"))))
-            .put(Blocks.OAK_WOOD,      ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("oak"))))
-            .put(Blocks.BIRCH_WOOD,    ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("birch"))))
-            .put(Blocks.JUNGLE_WOOD,   ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("jungle"))))
-            .put(Blocks.SPRUCE_WOOD,   ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("spruce"))))
-            .put(Blocks.ACACIA_WOOD,   ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("acacia"))))
-            .put(Blocks.DARK_OAK_WOOD, ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("dark_oak"))))
-            .put(Blocks.MANGROVE_WOOD, ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("mangrove"))))
-            .put(Blocks.CHERRY_WOOD,   ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("cherry"))))
-            .put(Blocks.CRIMSON_HYPHAE,ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("crimson"))))
-            .put(Blocks.WARPED_HYPHAE, ModItems.BARK.get(WoodTypeRegistry.getValue(new ResourceLocation("warped"))));
-        return builder.build();
-    });
-
-    public static Optional<Item> getBark(Block block) {
-        return Optional.ofNullable(WOOD_TO_BARK.get().get(block));
+    public static Optional<Block> getPrimroseColor(DyeColor color) {
+        return Optional.ofNullable(COLOR_TO_PRIMROSE.get().get(color));
     }
 
-    public static boolean isLog(BlockState state) {
-        return state.is(BlockTags.LOGS) && (!state.hasProperty(RotatedPillarBlock.AXIS) ||
-                state.getValue(RotatedPillarBlock.AXIS) == Direction.Axis.Y) &&
-                !BuiltInRegistries.BLOCK.getKey(state.getBlock()).getPath().contains("stripped");
-    }
 
     public static void growHangingRoots(ServerLevel level, RandomSource random, BlockPos pos) {
         Direction dir = Direction.values()[1 + random.nextInt(5)].getOpposite();

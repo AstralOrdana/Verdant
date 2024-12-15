@@ -80,9 +80,9 @@ public class SaguaroArmBlock extends Block implements BonemealableBlock {
         var dir = state.getValue(FACING);
         var belowState = level.getBlockState(pos.below());
         if (dir == Direction.DOWN) return belowState.is(ModTags.SAGUARO);
-        if (dir == Direction.UP) return belowState.isFaceSturdy(level, pos.below(), dir) || belowState.is(ModTags.SAGUARO);
+        if (dir == Direction.UP) return belowState.is(ModTags.SAGUARO_PLANTABLE_ON) || belowState.is(ModTags.SAGUARO);
         var relativePos =  pos.relative(dir.getOpposite());
-        return level.getBlockState(relativePos).isFaceSturdy(level, relativePos, dir) || level.getBlockState(relativePos).is(ModBlocks.SAGUARO_BLOCK.get());
+        return level.getBlockState(relativePos).is(ModTags.SAGUARO_PLANTABLE_ON) || level.getBlockState(relativePos).is(ModBlocks.SAGUARO_BLOCK.get());
     }
 
     @Nullable

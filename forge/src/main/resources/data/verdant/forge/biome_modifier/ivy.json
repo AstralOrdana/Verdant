@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#verdant:has_ivy",
+  "features": [
+    "verdant:ivy_patch"
+  ],
+  "step": "vegetal_decoration"
+}

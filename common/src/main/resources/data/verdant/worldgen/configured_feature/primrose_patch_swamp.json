@@ -10,13 +10,19 @@
             "entries": [
               {
                 "data": {
-                  "Name": "verdant:muscari"
+                  "Name": "verdant:brown_primrose"
                 },
                 "weight": 5
               },
               {
                 "data": {
-                  "Name": "verdant:tall_muscari"
+                  "Name": "verdant:black_primrose"
+                },
+                "weight": 2
+              },
+              {
+                "data": {
+                  "Name": "verdant:blue_primrose"
                 },
                 "weight": 1
               }
@@ -35,7 +41,7 @@
       ]
     },
     "tries": 64,
-    "xz_spread": 7,
-    "y_spread": 3
+    "xz_spread": 3,
+    "y_spread": 2
   }
 }

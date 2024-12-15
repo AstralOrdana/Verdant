@@ -23,7 +23,6 @@ import net.minecraft.world.level.material.PushReaction;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Properties;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -74,34 +73,34 @@ public class ModBlocks {
     public static final Supplier<Block> MOSS = regBlock("moss", () ->
             new MossMultifaceBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).randomTicks().instabreak().sound(SoundType.MOSS_CARPET).noOcclusion().noCollission()));
     public static final Supplier<Block> WEEDS = regWithItem("weeds", () ->
-            new WeedsBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().instabreak().sound(SoundType.GRASS)));
+            new WeedsBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().strength(0.5f).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
     public static final Supplier<Block> EDGE_GRASS = regWithItem("edge_grass", () ->
             new EdgeGrassBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(SoundType.GRASS).noOcclusion().replaceable()));
     public static final Supplier<Block> DOGWOOD = regWithItem("dogwood", () ->
-            new DogwoodBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().strength(3.0f).offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.GRASS)));
+            new DogwoodBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().strength(0.5f).offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.GRASS)));
     public static final Supplier<Block> DUNE_GRASS = regWithItem("dune_grass", () ->
-            new DuneGrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().instabreak().offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.GRASS)));
+            new SandBushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().strength(0.5f).offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.GRASS)));
     public static final Supplier<Block> BARLEY = regWithItem("barley", () ->
             new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).replaceable().noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XYZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> ALOE_VERA = regWithItem("aloe_vera", () ->
-            new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
+            new SandBushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> CATTAIL = regWithItem("cattail", () ->
             new CattailBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).replaceable().noCollission().instabreak().sound(SoundType.WET_GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> DENSE_GRASS = regWithItem("dense_grass", () ->
-            new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().strength(3.0f).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XYZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+            new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().strength(0.5f).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XYZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> BOXWOOD = regWithItem("boxwood", () ->
-            new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().strength(3.0f).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+            new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().strength(0.5f).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
 
     public static final Supplier<Block> CLOVER = regWithItem("clover", () ->
             new CloverBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> MONSTERA = regWithItem("monstera", () ->
-            new TallFlowerBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+            new TallFlowerBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XYZ).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> JUNGLE_FERN = regWithItem("jungle_fern", () ->
-            new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).replaceable().noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+            new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).replaceable().noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> SAGUARO_BLOCK = regWithItem("saguaro_block", () ->
-            new SaguaroBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+            new SaguaroBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.GRASS).strength(0.5f).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> SAGUARO_ARM = regWithItem("saguaro_arm", () ->
-            new SaguaroArmBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+            new SaguaroArmBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.GRASS).strength(0.5f).pushReaction(PushReaction.DESTROY)));
 
 
     public static final Supplier<Block> MUSCARI = regWithItem("muscari", () ->
@@ -116,56 +115,56 @@ public class ModBlocks {
             new FlowerBlock(MobEffects.DAMAGE_BOOST, 7, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
 
     public static final Supplier<Block> POTTED_MUSCARI = regBlock("potted_muscari",
-            () -> new FlowerPotBlock(MUSCARI.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+            () -> new FlowerPotBlock(MUSCARI.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
     public static final Supplier<Block> POTTED_RED_HIBISCUS = regBlock("potted_red_hibiscus",
-            () -> new FlowerPotBlock(RED_HIBISCUS.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+            () -> new FlowerPotBlock(RED_HIBISCUS.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
     public static final Supplier<Block> POTTED_PURPLE_HIBISCUS = regBlock("potted_purple_hibiscus",
-            () -> new FlowerPotBlock(PURPLE_HIBISCUS.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+            () -> new FlowerPotBlock(PURPLE_HIBISCUS.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
     public static final Supplier<Block> POTTED_BLUE_HIBISCUS = regBlock("potted_blue_hibiscus",
-            () -> new FlowerPotBlock(BLUE_HIBISCUS.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+            () -> new FlowerPotBlock(BLUE_HIBISCUS.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
     public static final Supplier<Block> POTTED_SAGUARO = regBlock("potted_saguaro",
-            () -> new FlowerPotBlock(SAGUARO_ARM.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+            () -> new FlowerPotBlock(SAGUARO_ARM.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
     public static final Supplier<Block> POTTED_JUNGLE_FERN = regBlock("potted_jungle_fern",
-            () -> new FlowerPotBlock(JUNGLE_FERN.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+            () -> new FlowerPotBlock(JUNGLE_FERN.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
     public static final Supplier<Block> POTTED_MONSTERA = regBlock("potted_monstera",
-            () -> new FlowerPotBlock(MONSTERA.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+            () -> new FlowerPotBlock(MONSTERA.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
     public static final Supplier<Block> POTTED_BOXWOOD = regBlock("potted_boxwood",
-            () -> new FlowerPotBlock(BOXWOOD.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+            () -> new FlowerPotBlock(BOXWOOD.get(), BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY).sound(SoundType.GRASS)));
 
 
 
     public static final Supplier<Block> RED_PRIMROSE = regWithItem("red_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.RED).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+                new PrimroseBlock(DyeColor.RED, BlockBehaviour.Properties.of().mapColor(DyeColor.RED).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> ORANGE_PRIMROSE = regWithItem("orange_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.ORANGE).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.ORANGE, BlockBehaviour.Properties.of().mapColor(DyeColor.ORANGE).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> YELLOW_PRIMROSE = regWithItem("yellow_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.YELLOW).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.YELLOW, BlockBehaviour.Properties.of().mapColor(DyeColor.YELLOW).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> LIME_PRIMROSE = regWithItem("lime_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.LIME).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.LIME, BlockBehaviour.Properties.of().mapColor(DyeColor.LIME).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> GREEN_PRIMROSE = regWithItem("green_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.GREEN).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.GREEN, BlockBehaviour.Properties.of().mapColor(DyeColor.GREEN).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> CYAN_PRIMROSE = regWithItem("cyan_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.CYAN).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.CYAN, BlockBehaviour.Properties.of().mapColor(DyeColor.CYAN).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> BLUE_PRIMROSE = regWithItem("blue_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.BLUE).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.BLUE, BlockBehaviour.Properties.of().mapColor(DyeColor.BLUE).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> LIGHT_BLUE_PRIMROSE = regWithItem("light_blue_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.LIGHT_BLUE).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.LIGHT_BLUE, BlockBehaviour.Properties.of().mapColor(DyeColor.LIGHT_BLUE).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> PURPLE_PRIMROSE = regWithItem("purple_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.PURPLE).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.PURPLE, BlockBehaviour.Properties.of().mapColor(DyeColor.PURPLE).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> MAGENTA_PRIMROSE = regWithItem("magenta_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.MAGENTA).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.MAGENTA, BlockBehaviour.Properties.of().mapColor(DyeColor.MAGENTA).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> PINK_PRIMROSE = regWithItem("pink_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.PINK).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.PINK, BlockBehaviour.Properties.of().mapColor(DyeColor.PINK).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> WHITE_PRIMROSE = regWithItem("white_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.WHITE, BlockBehaviour.Properties.of().mapColor(DyeColor.WHITE).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> BLACK_PRIMROSE = regWithItem("black_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.BLACK).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.BLACK, BlockBehaviour.Properties.of().mapColor(DyeColor.BLACK).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> GRAY_PRIMROSE = regWithItem("gray_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.GRAY).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.GRAY, BlockBehaviour.Properties.of().mapColor(DyeColor.GRAY).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> LIGHT_GRAY_PRIMROSE = regWithItem("light_gray_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.LIGHT_GRAY).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.LIGHT_GRAY, BlockBehaviour.Properties.of().mapColor(DyeColor.LIGHT_GRAY).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> BROWN_PRIMROSE = regWithItem("brown_primrose", () ->
-            new PrimroseBlock(BlockBehaviour.Properties.of().mapColor(DyeColor.BROWN).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
+            new PrimroseBlock(DyeColor.BROWN, BlockBehaviour.Properties.of().mapColor(DyeColor.BROWN).noCollission().sound(SoundType.PINK_PETALS).pushReaction(PushReaction.DESTROY)));
 
 
     public static final Supplier<Block> DUCKWEED = regBlock("duckweed", () ->

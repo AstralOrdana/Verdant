@@ -31,6 +31,12 @@
               },
               {
                 "data": {
+                  "Name": "verdant:green_primrose"
+                },
+                "weight": 1
+              },
+              {
+                "data": {
                   "Name": "verdant:red_hibiscus"
                 },
                 "weight": 1

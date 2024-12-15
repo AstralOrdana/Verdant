@@ -46,6 +46,7 @@ public class SaguaroFeature extends Feature<SaguaroFeatureConfig> {
         int height = config.height.sample(random);
         for (int i = 0; i < height; ++i) {
             blockSetter.accept(mutableBlockPos, state.setValue(BlockStateProperties.ATTACHED, (i + 1) == height));
+            if ((i + 1) == height) return false;
             if (random.nextInt(3) == 1) {
                 var dir = Direction.Plane.HORIZONTAL.getRandomDirection(random);
                 if (level.isEmptyBlock(mutableBlockPos.relative(dir))) {

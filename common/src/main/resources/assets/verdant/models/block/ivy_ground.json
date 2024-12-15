@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"1": "verdant:block/ivy",
-		"particle": "verdant:block/ivy"
+		"particle": "verdant:item/ivy"
 	},
 	"elements": [
 		{

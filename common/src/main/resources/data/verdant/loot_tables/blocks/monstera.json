@@ -2,14 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1.0,
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "verdant:frosty_fern"
-        }
-      ],
+      "bonus_rolls": 0,
       "conditions": [
         {
           "condition": "minecraft:match_tool",
@@ -19,7 +12,15 @@
             ]
           }
         }
-      ]
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "verdant:monstera"
+        }
+      ],
+      "rolls": 1
     }
-  ]
+  ],
+  "random_sequence": "verdant:blocks/monstera"
 }

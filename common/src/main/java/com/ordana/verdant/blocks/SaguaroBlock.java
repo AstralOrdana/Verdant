@@ -40,8 +40,12 @@ public class SaguaroBlock extends RotatedPillarBlock implements BonemealableBloc
     }
 
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        boolean bl = false;
+        for (Direction dir : Direction.values()) {
+            if (level.getBlockState(pos.relative(dir)).is(ModTags.SAGUARO_PLANTABLE_ON)) bl = true;
+        }
 
-        return !state.getValue(AXIS).isVertical() || (level.getBlockState(pos.below()).is(ModTags.SAGUARO_PLANTABLE_ON));
+        return bl;
     }
 
     public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {

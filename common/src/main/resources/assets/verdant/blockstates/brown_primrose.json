@@ -1,7 +1,21 @@
 {
   "variants": {
-    "": {
-      "model": "verdant:block/brown_primrose"
-    }
+    "": [
+      {
+        "model": "verdant:block/brown_primrose"
+      },
+      {
+        "model": "verdant:block/brown_primrose",
+        "y": 90
+      },
+      {
+        "model": "verdant:block/brown_primrose",
+        "y": 180
+      },
+      {
+        "model": "verdant:block/brown_primrose",
+        "y": 270
+      }
+    ]
   }
 }

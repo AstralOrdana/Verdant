@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "verdant:item/ivy_item"
+    "layer0": "verdant:item/ivy"
   }
 }

@@ -15,6 +15,18 @@ public class ModTags {
     public static final TagKey<Block> SAGUARO_PLANTABLE_ON = registerBlockTag("saguaro_plantable_on");
 
     public static final TagKey<Biome> HAS_IVY = registerBiomeTag("has_ivy");
+    public static final TagKey<Biome> HAS_DOGWOOD = registerBiomeTag("has_dogwood");
+    public static final TagKey<Biome> HAS_DOGWOOD_SNOWY = registerBiomeTag("has_dogwood_snowy");
+    public static final TagKey<Biome> HAS_CATTAILS = registerBiomeTag("has_cattails");
+    public static final TagKey<Biome> HAS_CLOVERS = registerBiomeTag("has_clovers");
+    public static final TagKey<Biome> HAS_BARLEY = registerBiomeTag("has_barley");
+    public static final TagKey<Biome> HAS_DENSE_GRASS = registerBiomeTag("has_dense_grass");
+    public static final TagKey<Biome> HAS_DUCKWEED = registerBiomeTag("has_duckweed");
+    public static final TagKey<Biome> HAS_SAGUARO = registerBiomeTag("has_saguaro");
+    public static final TagKey<Biome> HAS_ALOE_VERA = registerBiomeTag("has_aloe_vera");
+    public static final TagKey<Biome> HAS_BOXWOOD = registerBiomeTag("has_boxwood");
+    public static final TagKey<Biome> HAS_PRIMROSE = registerBiomeTag("has_primrose");
+    public static final TagKey<Biome> HAS_PRIMROSE_SWAMP = registerBiomeTag("has_primrose_swamp");
     public static final TagKey<Biome> HAS_DUNE_GRASS = registerBiomeTag("has_dune_grass");
     public static final TagKey<Biome> HAS_MOSS = registerBiomeTag("has_moss");
 

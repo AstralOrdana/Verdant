@@ -2,7 +2,7 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "bonus_rolls": 0.0,
+      "bonus_rolls": 0,
       "entries": [
         {
           "type": "minecraft:alternatives",
@@ -25,7 +25,7 @@
               "type": "minecraft:item",
               "conditions": [
                 {
-                  "chance": 0.25,
+                  "chance": 0.5,
                   "condition": "minecraft:random_chance"
                 }
               ],
@@ -47,7 +47,7 @@
           ]
         }
       ],
-      "rolls": 1.0
+      "rolls": 1
     }
   ],
   "random_sequence": "verdant:blocks/barley"

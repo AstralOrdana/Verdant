@@ -1,5 +1,5 @@
 {
-  "feature": "verdant:saguaro",
+  "feature": "verdant:saguaro_patch",
   "placement": [
     {
       "type": "minecraft:noise_based_count",
