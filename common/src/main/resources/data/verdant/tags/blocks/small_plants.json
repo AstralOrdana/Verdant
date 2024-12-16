@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:flowers",
+    "minecraft:grass",
+    "minecraft:fern",
+    "verdant:jungle_fern",
+    "#verdant:leaf_piles"
+  ]
+}

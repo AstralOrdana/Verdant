@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "verdant:oak_leaf_pile",
+    "verdant:birch_leaf_pile",
+    "verdant:spruce_leaf_pile",
+    "verdant:jungle_leaf_pile",
+    "verdant:acacia_leaf_pile",
+    "verdant:dark_oak_leaf_pile",
+    "verdant:mangrove_leaf_pile",
+    "verdant:cherry_leaf_pile",
+    "verdant:azalea_leaf_pile",
+    "verdant:flowering_azalea_leaf_pile"
+  ]
+}
