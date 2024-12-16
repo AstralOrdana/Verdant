@@ -1,0 +1,42 @@
+{
+  "variants": {
+    "facing=east": [
+      {
+        "model": "verdant:block/conk_fungus_0",
+        "y": 90
+      },
+      {
+        "model": "verdant:block/conk_fungus_1",
+        "y": 90
+      }
+    ],
+    "facing=north": [
+      {
+        "model": "verdant:block/conk_fungus_0"
+      },
+      {
+        "model": "verdant:block/conk_fungus_1"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "verdant:block/conk_fungus_0",
+        "y": 180
+      },
+      {
+        "model": "verdant:block/conk_fungus_1",
+        "y": 180
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "verdant:block/conk_fungus_0",
+        "y": 270
+      },
+      {
+        "model": "verdant:block/conk_fungus_1",
+        "y": 270
+      }
+    ]
+  }
+}

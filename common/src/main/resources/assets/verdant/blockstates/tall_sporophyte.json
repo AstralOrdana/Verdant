@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "verdant:block/tall_sporophyte_bottom"
+    },
+    "half=upper": {
+      "model": "verdant:block/tall_sporophyte_top"
+    }
+  }
+}

@@ -1,6 +1,5 @@
 package com.ordana.verdant.blocks;
 
-import com.ordana.verdant.reg.ModBlocks;
 import com.ordana.verdant.util.WeatheringHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -54,25 +53,40 @@ public class PrimroseBlock extends Block implements BonemealableBlock {
 
     @Override
     public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state, boolean isClient) {
-        return true;
+        boolean bl = false;
+        for (Direction dir : Direction.Plane.HORIZONTAL) {
+            if (level.getBlockState(pos.relative(dir)).canBeReplaced() && canSurvive(this.defaultBlockState(), level, pos.relative(dir))) {
+                bl = true;
+            }
+        }
+        return bl;
     }
 
     @Override
     public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
-        return true;
+        boolean bl = false;
+        for (Direction dir : Direction.Plane.HORIZONTAL) {
+            if (level.getBlockState(pos.relative(dir)).canBeReplaced() && canSurvive(this.defaultBlockState(), level, pos.relative(dir))) {
+                bl = true;
+            }
+        }
+
+        return bl;
     }
 
     @Override
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
-        Optional<Block> flowerState = Optional.of(this);
+        BlockState flowerState = this.defaultBlockState();
         BlockPos flowerPos = pos.relative(Direction.Plane.HORIZONTAL.getRandomDirection(random));
         for (Direction dir : Direction.Plane.HORIZONTAL.shuffledCopy(random)) {
             if (level.getBlockState(pos.relative(dir, 2)).getBlock() instanceof PrimroseBlock mate) {
-                flowerState = WeatheringHelper.getPrimroseColor(getOffspringColor(level, mate));
-                flowerPos = pos.relative(dir);
+                if (!mate.getColor().equals(color)) {
+                    flowerState = WeatheringHelper.getPrimroseColor(getOffspringColor(level, mate)).get().defaultBlockState();
+                    flowerPos = pos.relative(dir);
+                }
             }
         }
-        level.setBlockAndUpdate(flowerPos, flowerState.get().defaultBlockState());
+        if (canSurvive(flowerState, level, flowerPos)) level.setBlockAndUpdate(flowerPos, flowerState);
     }
 
     public final DyeColor getColor() {

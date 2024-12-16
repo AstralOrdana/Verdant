@@ -8,6 +8,7 @@
   "mixins": [
     "BeeMixin",
     "LeavesMixin",
+    "MossBlockMixin",
     "MudBlockHitboxMixin",
     "RootedDirtBlockMixin"
   ],

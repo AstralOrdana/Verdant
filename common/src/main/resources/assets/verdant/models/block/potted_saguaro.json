@@ -1,5 +1,5 @@
 {
-  "credit": "Made with Blockbench",
+  "ambientocclusion": false,
   "textures": {
     "3": "verdant:block/saguaro_arm_side",
     "4": "verdant:block/saguaro_arm_top",

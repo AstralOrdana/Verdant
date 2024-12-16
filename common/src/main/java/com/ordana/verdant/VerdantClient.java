@@ -17,13 +17,10 @@ import net.mehvahdjukaar.moonlight.api.util.math.colors.RGBColor;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.BlockPos;
-import net.minecraft.util.Mth;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-
-import java.util.Random;
 
 public class VerdantClient {
 
@@ -65,8 +62,42 @@ public class VerdantClient {
         ClientHelper.registerRenderType(ModBlocks.RED_HIBISCUS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.PURPLE_HIBISCUS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.BLUE_HIBISCUS.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.DAHLIA.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.ANEMONE.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POKER.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.SALVIA.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.SHRUB.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.DUNE_BUSH.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.SPOROPHYTE.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.TALL_SPOROPHYTE.get(), RenderType.cutout());
 
+        ClientHelper.registerRenderType(ModBlocks.CONK_FUNGUS.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.STINKHORN_MUSHROOM.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.WHITE_STINKHORN_MUSHROOM.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.PHOSPHOR_FUNGUS.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.MUSHGLOOM.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.MILLY_BUBCAP.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.PORTABELLA.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.CRIMINI.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.BUTTON_MUSHROOM.get(), RenderType.cutout());
+
+        ClientHelper.registerRenderType(ModBlocks.POTTED_STINKHORN_MUSHROOM.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_WHITE_STINKHORN_MUSHROOM.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_PHOSPHOR_FUNGUS.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_MUSHGLOOM.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_MILLY_BUBCAP.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_PORTABELLA.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_CRIMINI.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_BUTTON_MUSHROOM.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_SPOROPHYTE.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.PHOSPHOR_FUNGUS_BLOCK.get(), RenderType.translucent());
+
+        ClientHelper.registerRenderType(ModBlocks.POTTED_DAHLIA.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_ANEMONE.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_POKER.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_SALVIA.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.POTTED_BOXWOOD.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_SHRUB.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.POTTED_MUSCARI.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.POTTED_MONSTERA.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.POTTED_JUNGLE_FERN.get(), RenderType.cutoutMipped());
@@ -74,9 +105,13 @@ public class VerdantClient {
         ClientHelper.registerRenderType(ModBlocks.POTTED_PURPLE_HIBISCUS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.POTTED_BLUE_HIBISCUS.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.POTTED_SAGUARO.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_ALOE_VERA.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_CATTAIL.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.POTTED_PEONY.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.POTTED_LILAC.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.POTTED_ROSE.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_SUNFLOWER.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.POTTED_SEA_PICKLE.get(), RenderType.cutoutMipped());
 
         ClientHelper.registerRenderType(ModBlocks.RED_PRIMROSE.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.ORANGE_PRIMROSE.get(), RenderType.cutoutMipped());
@@ -148,7 +183,10 @@ public class VerdantClient {
                 ModBlocks.DENSE_GRASS.get());
 
         //spruce leaves tint
-        event.register((blockState, level, blockPos, i) -> event.getColor(Blocks.SPRUCE_LEAVES.defaultBlockState(), level, blockPos, i),
+        event.register((blockState, level, blockPos, i) -> {
+                    if (i == 0) return -1;
+                    return event.getColor(Blocks.SPRUCE_LEAVES.defaultBlockState(), level, blockPos, i);
+                },
                 ModBlocks.POTTED_BOXWOOD.get(),
                 ModBlocks.BOXWOOD.get());
 
@@ -174,6 +212,7 @@ public class VerdantClient {
                 ModBlocks.GRAY_PRIMROSE.get(),
                 ModBlocks.LIGHT_GRAY_PRIMROSE.get(),
                 ModBlocks.BROWN_PRIMROSE.get(),
+                ModBlocks.SHRUB.get(),
                 ModBlocks.BARLEY.get());
     }
 

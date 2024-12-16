@@ -29,6 +29,8 @@ public class ModTags {
     public static final TagKey<Biome> HAS_PRIMROSE_SWAMP = registerBiomeTag("has_primrose_swamp");
     public static final TagKey<Biome> HAS_DUNE_GRASS = registerBiomeTag("has_dune_grass");
     public static final TagKey<Biome> HAS_MOSS = registerBiomeTag("has_moss");
+    public static final TagKey<Biome> HAS_SHRUB = registerBiomeTag("has_shrub");
+    public static final TagKey<Biome> HAS_DUNE_BUSH = registerBiomeTag("has_dune_bush");
 
 
 

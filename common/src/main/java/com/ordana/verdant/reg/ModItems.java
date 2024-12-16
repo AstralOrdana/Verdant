@@ -1,7 +1,6 @@
 package com.ordana.verdant.reg;
 
 import com.ordana.verdant.Verdant;
-import com.ordana.verdant.blocks.LeafPileBlock;
 import com.ordana.verdant.items.*;
 import com.ordana.verdant.items.materials.FlowerCrownMaterial;
 import net.mehvahdjukaar.moonlight.api.item.WoodBasedItem;
@@ -54,6 +53,16 @@ public class ModItems {
     public static final Supplier<Item> ENCHANTED_GOLDEN_MOSS_CLUMP = regItem("enchanted_golden_moss_clump", () ->
             new EnchantedGoldenMossClumpItem(new Item.Properties()
                     .rarity(Rarity.EPIC).food(ModFoods.ENCHANTED_GOLDEN_MOSS_CLUMP)));
+
+    public static final Supplier<Item> BUTTON_MUSHROOM = regItem("button_mushroom", () ->
+            new BlockItem(ModBlocks.BUTTON_MUSHROOM.get(), new Item.Properties().food(ModFoods.BUTTON_MUSHROOM)));
+    public static final Supplier<Item> CRIMINI = regItem("crimini", () ->
+            new BlockItem(ModBlocks.CRIMINI.get(), new Item.Properties().food(ModFoods.CRIMINI)));
+    public static final Supplier<Item> PORTABELLA = regItem("portabella", () ->
+            new BlockItem(ModBlocks.PORTABELLA.get(), new Item.Properties().food(ModFoods.PORTABELLA)));
+    public static final Supplier<Item> GRILLED_PORTABELLA = regItem("grilled_portabella", () ->
+            new Item(new Item.Properties().food(ModFoods.GRILLED_PORTABELLA)));
+
 
     //bark
 

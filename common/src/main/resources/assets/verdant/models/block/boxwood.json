@@ -1,7 +1,8 @@
 {
-  "parent": "verdant:block/bush_dense_tint",
+  "parent": "verdant:block/bush_dense_overlay_tint",
   "textures": {
-    "grass": "verdant:block/boxwood",
-    "overlay": "verdant:block/boxwood_overlay"
+    "base": "verdant:block/boxwood",
+    "overlay": "verdant:block/boxwood_overlay",
+    "particle": "verdant:item/boxwood"
   }
 }

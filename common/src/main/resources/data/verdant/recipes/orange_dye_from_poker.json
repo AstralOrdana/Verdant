@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "verdant:poker"
+    }
+  ],
+  "result": {
+    "item": "minecraft:orange_dye"
+  }
+}

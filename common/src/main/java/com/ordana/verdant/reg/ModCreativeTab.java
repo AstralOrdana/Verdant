@@ -31,6 +31,7 @@ public class ModCreativeTab {
                 ModBlocks.DENSE_GRASS,
                 ModBlocks.EDGE_GRASS,
                 ModBlocks.WEEDS,
+                ModBlocks.SPOROPHYTE, ModBlocks.TALL_SPOROPHYTE,
 
                 ModBlocks.JUNGLE_FERN,
                 ModBlocks.MONSTERA,
@@ -46,6 +47,8 @@ public class ModCreativeTab {
 
         after(e, Items.CACTUS, CreativeModeTabs.NATURAL_BLOCKS,
                 ModBlocks.DUNE_GRASS,
+                ModBlocks.DUNE_BUSH,
+                ModBlocks.SHRUB,
                 ModBlocks.ALOE_VERA,
                 ModBlocks.SAGUARO_BLOCK,
                 ModBlocks.SAGUARO_ARM
@@ -53,6 +56,9 @@ public class ModCreativeTab {
 
         after(e, Items.LILY_OF_THE_VALLEY, CreativeModeTabs.NATURAL_BLOCKS,
                 ModBlocks.RED_HIBISCUS, ModBlocks.PURPLE_HIBISCUS, ModBlocks.BLUE_HIBISCUS,
+                ModBlocks.ANEMONE,
+                ModBlocks.DAHLIA,
+                ModBlocks.POKER,
                 ModBlocks.MUSCARI,
                 ModBlocks.RED_PRIMROSE,
                 ModBlocks.ORANGE_PRIMROSE,
@@ -78,6 +84,26 @@ public class ModCreativeTab {
 
         before(e, Items.INK_SAC, CreativeModeTabs.INGREDIENTS,
                 ModItems.AZALEA_FLOWERS, ModItems.FLOWER_CROWN
+        );
+
+        after(e, Items.RED_MUSHROOM, CreativeModeTabs.NATURAL_BLOCKS,
+                ModBlocks.BUTTON_MUSHROOM, ModBlocks.CRIMINI, ModBlocks.PORTABELLA, ModItems.GRILLED_PORTABELLA,
+                ModBlocks.CONK_FUNGUS, ModBlocks.STINKHORN_MUSHROOM, ModBlocks.WHITE_STINKHORN_MUSHROOM,
+                ModBlocks.PHOSPHOR_FUNGUS, ModBlocks.MUSHGLOOM, ModBlocks.MILLY_BUBCAP
+        );
+
+        after(e, Items.MUSHROOM_STEM, CreativeModeTabs.NATURAL_BLOCKS,
+                ModBlocks.CAVE_MUSHROOM_STEM
+        );
+
+        after(e, Items.SHROOMLIGHT, CreativeModeTabs.NATURAL_BLOCKS,
+                ModBlocks.PHOSPHOR_SHROOMLIGHT
+        );
+
+        after(e, Items.RED_MUSHROOM_BLOCK, CreativeModeTabs.NATURAL_BLOCKS,
+                ModBlocks.PORTABELLA_BLOCK,
+                ModBlocks.CONK_FUNGUS_BLOCK, ModBlocks.STINKHORN_MUSHROOM_BLOCK, ModBlocks.WHITE_STINKHORN_MUSHROOM_BLOCK,
+                ModBlocks.PHOSPHOR_FUNGUS_BLOCK, ModBlocks.MUSHGLOOM_BLOCK, ModBlocks.MILLY_BUBCAP_BLOCK
         );
 
 

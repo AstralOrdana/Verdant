@@ -10,6 +10,12 @@
             "entries": [
               {
                 "data": {
+                  "Name": "minecraft:air"
+                },
+                "weight": 40
+              },
+              {
+                "data": {
                   "Name": "verdant:jungle_fern"
                 },
                 "weight": 40
@@ -28,6 +34,33 @@
                   }
                 },
                 "weight": 3
+              },
+              {
+                "data": {
+                  "Name": "verdant:salvia",
+                  "Properties": {
+                    "half": "lower"
+                  }
+                },
+                "weight": 3
+              },
+              {
+                "data": {
+                  "Name": "verdant:poker"
+                },
+                "weight": 1
+              },
+              {
+                "data": {
+                  "Name": "verdant:anemone"
+                },
+                "weight": 1
+              },
+              {
+                "data": {
+                  "Name": "verdant:dahlia"
+                },
+                "weight": 1
               },
               {
                 "data": {

@@ -3,6 +3,30 @@
   "values": [
     "verdant:azalea_flowers",
     "verdant:flower_crown",
-    "verdant:flowering_azalea_leaf_pile"
+    "verdant:flowering_azalea_leaf_pile",
+    "verdant:salvia",
+    "verdant:muscari",
+    "verdant:anemone",
+    "verdant:poker",
+    "verdant:dahlia",
+    "verdant:red_hibiscus",
+    "verdant:purple_hibiscus",
+    "verdant:blue_hibiscus",
+    "verdant:brown_primrose",
+    "verdant:black_primrose",
+    "verdant:gray_primrose",
+    "verdant:light_gray_primrose",
+    "verdant:white_primrose",
+    "verdant:pink_primrose",
+    "verdant:magenta_primrose",
+    "verdant:purple_primrose",
+    "verdant:cyan_primrose",
+    "verdant:light_blue_primrose",
+    "verdant:blue_primrose",
+    "verdant:green_primrose",
+    "verdant:lime_primrose",
+    "verdant:yellow_primrose",
+    "verdant:orange_primrose",
+    "verdant:red_primrose"
   ]
 }

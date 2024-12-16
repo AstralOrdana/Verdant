@@ -1,0 +1,12 @@
+{
+  "type": "verdant:wall_mushroom",
+  "config": {
+    "block": "verdant:conk_fungus",
+    "can_place_on_floor": false,
+    "can_be_placed_on": [
+      "minecraft:oak_log",
+      "minecraft:spruce_log",
+      "minecraft:dark_oak_log"
+    ]
+  }
+}

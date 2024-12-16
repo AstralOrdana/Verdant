@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_single_face",
+  "textures": {
+    "texture": "verdant:block/white_stinkhorn_mushroom_block"
+  }
+}

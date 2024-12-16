@@ -1,0 +1,8 @@
+{
+  "parent": "verdant:block/cross_overlay_tint",
+  "textures": {
+    "base": "verdant:block/shrub",
+    "overlay": "verdant:block/shrub_overlay",
+    "particle": "verdant:item/shrub"
+  }
+}
