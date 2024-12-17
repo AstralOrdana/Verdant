@@ -60,6 +60,7 @@ public class ModCreativeTab {
                 ModBlocks.DAHLIA,
                 ModBlocks.POKER,
                 ModBlocks.MUSCARI,
+                ModBlocks.SALVIA,
                 ModBlocks.RED_PRIMROSE,
                 ModBlocks.ORANGE_PRIMROSE,
                 ModBlocks.YELLOW_PRIMROSE,

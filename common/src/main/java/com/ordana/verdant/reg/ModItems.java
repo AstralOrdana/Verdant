@@ -47,7 +47,7 @@ public class ModItems {
             new DuckweedItem(ModBlocks.DUCKWEED.get(), new Item.Properties()));
 
     public static final Supplier<Item> MOSS_CLUMP = regItem("moss_clump", () ->
-            new BlockItem(ModBlocks.MOSS.get(), new Item.Properties().food(ModFoods.MOSS_CLUMP)));
+            new MossClumpItem(ModBlocks.MOSS.get(), new Item.Properties().food(ModFoods.MOSS_CLUMP)));
     public static final Supplier<Item> GOLDEN_MOSS_CLUMP = regItem("golden_moss_clump", () ->
             new Item(new Item.Properties().food(ModFoods.GOLDEN_MOSS_CLUMP)));
     public static final Supplier<Item> ENCHANTED_GOLDEN_MOSS_CLUMP = regItem("enchanted_golden_moss_clump", () ->

@@ -13,6 +13,9 @@ public class ModTags {
 
     public static final TagKey<Block> SAGUARO = registerBlockTag("saguaro");
     public static final TagKey<Block> SAGUARO_PLANTABLE_ON = registerBlockTag("saguaro_plantable_on");
+    public static final TagKey<Block> LEAF_PILES = registerBlockTag("leaf_piles");
+    public static final TagKey<Block> SMALL_PLANTS = registerBlockTag("small_plants");
+    public static final TagKey<Block> MOSSY = registerBlockTag("mossy");
 
     public static final TagKey<Biome> HAS_IVY = registerBiomeTag("has_ivy");
     public static final TagKey<Biome> HAS_DOGWOOD = registerBiomeTag("has_dogwood");

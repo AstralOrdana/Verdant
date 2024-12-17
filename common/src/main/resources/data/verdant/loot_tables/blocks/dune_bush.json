@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "verdant:dahlia"
+          "name": "verdant:dune_bush"
         }
       ],
       "conditions": [

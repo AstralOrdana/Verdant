@@ -1,6 +1,7 @@
 package com.ordana.verdant;
 
 import com.ordana.verdant.configs.ClientConfigs;
+import com.ordana.verdant.configs.CommonConfigs;
 import com.ordana.verdant.dynamicpack.ServerDynamicResourcesHandler;
 import com.ordana.verdant.network.NetworkHandler;
 import com.ordana.verdant.reg.*;
@@ -19,6 +20,9 @@ public class Verdant {
     }
 
     public static void commonInit() {
+
+        CommonConfigs.init();
+
         if (PlatHelper.getPhysicalSide().isClient()) {
             ClientConfigs.init();
             VerdantClient.init();

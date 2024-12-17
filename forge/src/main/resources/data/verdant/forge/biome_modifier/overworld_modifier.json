@@ -1,0 +1,15 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "spelunkery:conk_fungus",
+    "spelunkery:conk_fungus_surface",
+    "spelunkery:stinkhorn",
+    "spelunkery:stinkhorn_deepslate",
+    "spelunkery:portabella",
+    "spelunkery:phosphor_fungus",
+    "spelunkery:mushgloom",
+    "spelunkery:rare_huge_mushroom"
+  ],
+  "step": "underground_ores"
+}
