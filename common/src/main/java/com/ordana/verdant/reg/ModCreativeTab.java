@@ -1,6 +1,7 @@
 package com.ordana.verdant.reg;
 
 import com.ordana.verdant.Verdant;
+import com.ordana.verdant.configs.CommonConfigs;
 import net.mehvahdjukaar.moonlight.api.misc.RegSupplier;
 import net.mehvahdjukaar.moonlight.api.platform.RegHelper;
 import net.minecraft.network.chat.Component;
@@ -14,7 +15,7 @@ import java.util.function.Supplier;
 
 public class ModCreativeTab {
 
-    public static final RegSupplier<CreativeModeTab> MOD_TAB =
+    public static final RegSupplier<CreativeModeTab> MOD_TAB = !CommonConfigs.CREATIVE_TAB.get() ? null :
             RegHelper.registerCreativeModeTab(Verdant.res("verdant"),
                     (c) -> c.title(Component.translatable("itemGroup.verdant.verdant"))
                             .icon(() -> ModBlocks.IVY.get().asItem().getDefaultInstance()));

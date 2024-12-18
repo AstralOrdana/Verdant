@@ -29,7 +29,7 @@ public class CommonConfigs {
         builder.setSynced();
 
         builder.push("general");
-        CREATIVE_TAB = builder.define("creative_tab", false);
+        CREATIVE_TAB = builder.define("creative_tab", true);
         CREATIVE_DROP = builder.comment("Drop stuff when in creative").define("drop_in_creative", false);
         DEBUG_RESOURCES = builder.comment("Save generated resources to disk in a 'debug' folder in your game directory. Mainly for debug purposes but can be used to generate assets in all wood types for your mods :0")
                 .define("debug_save_dynamic_pack", false);
