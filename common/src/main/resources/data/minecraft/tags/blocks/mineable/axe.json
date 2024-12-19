@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "spelunkery:stinkhorn_mushroom_block",
+    "spelunkery:white_stinkhorn_mushroom_block",
+    "spelunkery:portabella_block",
+    "spelunkery:conk_fungus_block",
+    "spelunkery:milly_bubcap_block",
+    "spelunkery:phosphor_fungus_block",
+    "spelunkery:mushgloom_block",
+    "spelunkery:cave_mushroom_stem"
+  ]
+}

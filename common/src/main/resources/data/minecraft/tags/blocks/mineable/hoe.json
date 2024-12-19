@@ -1,9 +1,13 @@
 {
   "replace": false,
   "values": [
-    "verdant:dune_grass",
-    "verdant:boxwood",
+    "verdant:weeds",
     "verdant:dogwood",
+    "verdant:dune_grass",
+    "verdant:dense_grass",
+    "verdant:boxwood",
+    "verdant:shrub",
+    "verdant:sagebrush",
     "verdant:phosphor_shroomlight"
   ]
 }

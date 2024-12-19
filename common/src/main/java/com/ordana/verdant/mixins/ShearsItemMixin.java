@@ -1,22 +1,26 @@
 package com.ordana.verdant.mixins;
 
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.ordana.verdant.reg.ModTags;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShearsItem;
-import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.Slice;
 
 @Mixin(ShearsItem.class)
 public class ShearsItemMixin {
 
-    @Inject(method = "mineBlock", at = @At("HEAD"), cancellable = true)
-    public void getCollisionShape(ItemStack stack, Level level, BlockState state, BlockPos pos, LivingEntity miningEntity, CallbackInfoReturnable<Boolean> cir) {
-        if (state.is(ModTags.SHEARABLE)) cir.setReturnValue(true);
+    @WrapOperation(method = "getDestroySpeed",
+            slice = @Slice(
+                    from = @At(value = "FIELD", target = "Lnet/minecraft/world/level/block/Blocks;VINE:Lnet/minecraft/world/level/block/Block;")
+            ),
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/BlockState;is(Lnet/minecraft/world/level/block/Block;)Z", ordinal = 0)
+
+    )
+    private boolean addShearables(BlockState instance, Block block, Operation<Boolean> original) {
+        return original.call(instance, block) || instance.is(ModTags.SHEARABLE);
     }
 }
