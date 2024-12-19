@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "verdant:block/dune_bush"
+    "layer0": "verdant:item/sagebrush"
   }
 }

@@ -16,6 +16,7 @@ public class ModTags {
     public static final TagKey<Block> LEAF_PILES = registerBlockTag("leaf_piles");
     public static final TagKey<Block> SMALL_PLANTS = registerBlockTag("small_plants");
     public static final TagKey<Block> MOSSY = registerBlockTag("mossy");
+    public static final TagKey<Block> SHEARABLE = registerBlockTag("shearable");
 
     public static final TagKey<Biome> HAS_IVY = registerBiomeTag("has_ivy");
     public static final TagKey<Biome> HAS_DOGWOOD = registerBiomeTag("has_dogwood");
@@ -33,7 +34,7 @@ public class ModTags {
     public static final TagKey<Biome> HAS_DUNE_GRASS = registerBiomeTag("has_dune_grass");
     public static final TagKey<Biome> HAS_MOSS = registerBiomeTag("has_moss");
     public static final TagKey<Biome> HAS_SHRUB = registerBiomeTag("has_shrub");
-    public static final TagKey<Biome> HAS_DUNE_BUSH = registerBiomeTag("has_dune_bush");
+    public static final TagKey<Biome> HAS_SAGEBRUSH = registerBiomeTag("has_sagebrush");
 
 
 

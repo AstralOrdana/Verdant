@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "verdant:dune_bush"
+          "name": "verdant:sagebrush"
         }
       ],
       "conditions": [

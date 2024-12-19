@@ -48,7 +48,7 @@ public class ModCreativeTab {
 
         after(e, Items.CACTUS, CreativeModeTabs.NATURAL_BLOCKS,
                 ModBlocks.DUNE_GRASS,
-                ModBlocks.DUNE_BUSH,
+                ModBlocks.SAGEBRUSH,
                 ModBlocks.SHRUB,
                 ModBlocks.ALOE_VERA,
                 ModBlocks.SAGUARO_BLOCK,

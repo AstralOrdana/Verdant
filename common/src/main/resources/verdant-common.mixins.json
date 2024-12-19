@@ -10,7 +10,8 @@
     "LeavesMixin",
     "MossBlockMixin",
     "MudBlockHitboxMixin",
-    "RootedDirtBlockMixin"
+    "RootedDirtBlockMixin",
+    "ShearsItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -84,8 +84,8 @@ public class ModWorldgen {
         ResourceKey<PlacedFeature> shrub_patch = ResourceKey.create(Registries.PLACED_FEATURE, Verdant.res("shrub_patch"));
         PlatformSpecific.addFeatureToBiome(GenerationStep.Decoration.VEGETAL_DECORATION, ModTags.HAS_SHRUB, shrub_patch);
 
-        ResourceKey<PlacedFeature> dune_bush_patch = ResourceKey.create(Registries.PLACED_FEATURE, Verdant.res("dune_bush_patch"));
-        PlatformSpecific.addFeatureToBiome(GenerationStep.Decoration.VEGETAL_DECORATION, ModTags.HAS_DUNE_BUSH, dune_bush_patch);
+        ResourceKey<PlacedFeature> sagebrush_patch = ResourceKey.create(Registries.PLACED_FEATURE, Verdant.res("sagebrush_patch"));
+        PlatformSpecific.addFeatureToBiome(GenerationStep.Decoration.VEGETAL_DECORATION, ModTags.HAS_SAGEBRUSH, sagebrush_patch);
 
         ResourceKey<PlacedFeature> primrose_patch = ResourceKey.create(Registries.PLACED_FEATURE, Verdant.res("primrose_patch"));
         PlatformSpecific.addFeatureToBiome(GenerationStep.Decoration.VEGETAL_DECORATION, ModTags.HAS_PRIMROSE, primrose_patch);

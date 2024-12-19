@@ -78,13 +78,13 @@ public class ModBlocks {
     public static final Supplier<Block> MOSS = regBlock("moss", () ->
             new MossMultifaceBlock(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).randomTicks().instabreak().sound(SoundType.MOSS_CARPET).noOcclusion().noCollission()));
     public static final Supplier<Block> WEEDS = regWithItem("weeds", () ->
-            new WeedsBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().strength(0.5f).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ)));
+            new WeedsBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().strength(0.5f).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> EDGE_GRASS = regWithItem("edge_grass", () ->
             new EdgeGrassBlock(BlockBehaviour.Properties.of().noCollission().instabreak().sound(SoundType.GRASS).noOcclusion().replaceable()));
     public static final Supplier<Block> DOGWOOD = regWithItem("dogwood", () ->
-            new DogwoodBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().strength(0.5f).offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.GRASS)));
+            new DogwoodBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().strength(0.5f).offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> DUNE_GRASS = regWithItem("dune_grass", () ->
-            new SandBushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().strength(0.5f).offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.GRASS)));
+            new SandBushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS).noCollission().strength(0.5f).offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> BARLEY = regWithItem("barley", () ->
             new ModGrassBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).replaceable().noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XYZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> ALOE_VERA = regWithItem("aloe_vera", () ->
@@ -97,8 +97,8 @@ public class ModBlocks {
             new BigBushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().strength(0.5f).sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).ignitedByLava().pushReaction(PushReaction.DESTROY)));
     public static final Supplier<Block> SHRUB = regWithItem("shrub", () ->
             new ShrubBushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().strength(0.2f).sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
-    public static final Supplier<Block> DUNE_BUSH = regWithItem("dune_bush", () ->
-            new SandBushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+    public static final Supplier<Block> SAGEBRUSH = regWithItem("sagebrush", () ->
+            new SandBushBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().strength(0.5f).offsetType(BlockBehaviour.OffsetType.XZ).sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
 
     public static final Supplier<Block> CLOVER = regWithItem("clover", () ->
             new CloverBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));

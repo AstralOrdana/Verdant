@@ -67,7 +67,7 @@ public class VerdantClient {
         ClientHelper.registerRenderType(ModBlocks.POKER.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.SALVIA.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.SHRUB.get(), RenderType.cutoutMipped());
-        ClientHelper.registerRenderType(ModBlocks.DUNE_BUSH.get(), RenderType.cutoutMipped());
+        ClientHelper.registerRenderType(ModBlocks.SAGEBRUSH.get(), RenderType.cutoutMipped());
         ClientHelper.registerRenderType(ModBlocks.SPOROPHYTE.get(), RenderType.cutout());
         ClientHelper.registerRenderType(ModBlocks.TALL_SPOROPHYTE.get(), RenderType.cutout());
 

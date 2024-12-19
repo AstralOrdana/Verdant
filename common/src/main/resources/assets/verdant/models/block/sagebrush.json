@@ -1,0 +1,6 @@
+{
+  "parent": "verdant:block/bush_dense",
+  "textures": {
+    "base": "verdant:block/sagebrush"
+  }
+}
