@@ -87,11 +87,11 @@ public class CattailBlock extends DoublePlantBlock implements LiquidBlockContain
 
     @Override
     public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
-        return true;
+        return random.nextBoolean();
     }
 
     @Override
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
-        if (random.nextBoolean()) popResource(level, pos, new ItemStack(this));
+        popResource(level, pos, new ItemStack(this));
     }
 }

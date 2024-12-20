@@ -13,15 +13,15 @@ version = "${version}"
 
 displayName="Verdant" #mandatory
 
-logoFile="icon.png" #optional
+logoFile="icon.gif" #optional
 
 credits="Ordana" #optional
 
-authors="Ordana" #optional
+authors="Ordana, Kayla_the_bee" #optional
 
 itemIcon="verdant:template" #catalogue icon
 description='''
-Verdant Description
+Abundant foliage and greenery bring your world to life.
 '''
 
 [[dependencies.verdant]]

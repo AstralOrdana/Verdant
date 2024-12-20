@@ -7,13 +7,10 @@
         "config": {
           "to_place": {
             "type": "minecraft:weighted_state_provider",
+            "state": {
+              "Name": "verdant:dense_grass"
+            },
             "entries": [
-              {
-                "data": {
-                  "Name": "minecraft:air"
-                },
-                "weight": 40
-              },
               {
                 "data": {
                   "Name": "verdant:jungle_fern"
@@ -94,31 +91,14 @@
         {
           "type": "minecraft:block_predicate_filter",
           "predicate": {
-            "type": "minecraft:all_of",
-            "predicates": [
-              {
-                "type": "minecraft:matching_blocks",
-                "blocks": "minecraft:air"
-              },
-              {
-                "type": "minecraft:not",
-                "predicate": {
-                  "type": "minecraft:matching_blocks",
-                  "blocks": "minecraft:podzol",
-                  "offset": [
-                    0,
-                    -1,
-                    0
-                  ]
-                }
-              }
-            ]
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
           }
         }
       ]
     },
-    "tries": 32,
-    "xz_spread": 7,
+    "tries": 96,
+    "xz_spread": 2,
     "y_spread": 3
   }
 }

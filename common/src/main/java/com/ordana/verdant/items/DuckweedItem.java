@@ -31,6 +31,6 @@ public class DuckweedItem extends BlockItem {
         BlockHitResult blockHitResult = getPlayerPOVHitResult(level, player, ClipContext.Fluid.SOURCE_ONLY);
         BlockHitResult blockHitResult2 = blockHitResult.withPosition(blockHitResult.getBlockPos().above());
         InteractionResult interactionResult = super.useOn(new UseOnContext(player, usedHand, blockHitResult2));
-        return new InteractionResultHolder(interactionResult, player.getItemInHand(usedHand));
+        return new InteractionResultHolder<>(interactionResult, player.getItemInHand(usedHand));
     }
 }

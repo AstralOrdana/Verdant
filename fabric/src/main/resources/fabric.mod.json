@@ -3,16 +3,17 @@
   "id": "verdant",
   "version": "${version}",
   "name": "Verdant",
-  "description": "Verdant Description",
+  "description": "Abundant foliage and greenery bring your world to life.",
   "authors": [
-    "Ordana"
+    "Ordana",
+    "Kayla_the_bee"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/verdant",
+    "homepage": "https://modrinth.com/project/verdant-mod",
     "sources": "https://github.com/AstralOrdana/verdant"
   },
   "license": "LGPLv3",
-  "icon": "icon.png",
+  "icon": "icon.gif",
   "environment": "*",
   "entrypoints": {
     "main": [
