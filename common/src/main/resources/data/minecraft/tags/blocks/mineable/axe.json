@@ -1,13 +1,13 @@
 {
   "replace": false,
   "values": [
-    "spelunkery:stinkhorn_mushroom_block",
-    "spelunkery:white_stinkhorn_mushroom_block",
-    "spelunkery:portabella_block",
-    "spelunkery:conk_fungus_block",
-    "spelunkery:milly_bubcap_block",
-    "spelunkery:phosphor_fungus_block",
-    "spelunkery:mushgloom_block",
-    "spelunkery:cave_mushroom_stem"
+    "verdant:stinkhorn_mushroom_block",
+    "verdant:white_stinkhorn_mushroom_block",
+    "verdant:portabella_block",
+    "verdant:conk_fungus_block",
+    "verdant:milly_bubcap_block",
+    "verdant:phosphor_fungus_block",
+    "verdant:mushgloom_block",
+    "verdant:cave_mushroom_stem"
   ]
 }

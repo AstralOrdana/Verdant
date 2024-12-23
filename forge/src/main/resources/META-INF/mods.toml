@@ -1,25 +1,25 @@
 
-modLoader="javafml" #mandatory
+modLoader="javafml"
 
-loaderVersion="[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+loaderVersion="[40,)"
 
 license="LGPLv3"
 
-[[mods]] #mandatory
+[[mods]]
 
-modId="verdant" #mandatory
+modId="verdant"
 
 version = "${version}"
 
-displayName="Verdant" #mandatory
+displayName="Verdant"
 
-logoFile="icon.gif" #optional
+logoFile="icon.gif"
 
-credits="Ordana" #optional
+credits="Ordana"
 
-authors="Ordana, Kayla_the_bee" #optional
+authors="Ordana, Kayla_the_bee"
 
-itemIcon="verdant:template" #catalogue icon
+itemIcon="verdant:template"
 description='''
 Abundant foliage and greenery bring your world to life.
 '''
