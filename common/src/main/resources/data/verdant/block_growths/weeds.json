@@ -34,7 +34,7 @@
     }
   ],
   "destroy_target": true,
-  "owners": "#grounded:farmlands",
+  "owners": "minecraft:farmland",
   "replacing_target": {
     "blocks": "#verdant:weeds_replaceable",
     "predicate_type": "verdant:block_set_match",
